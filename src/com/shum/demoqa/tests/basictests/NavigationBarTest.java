@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.shum.demoqa.pages.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.tests.BaseTest;
 
 public class NavigationBarTest extends BaseTest {

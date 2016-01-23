@@ -1,4 +1,4 @@
-package com.shum.demoqa.pages;
+package com.shum.demoqa.page;
 
 import java.util.concurrent.TimeUnit;
 

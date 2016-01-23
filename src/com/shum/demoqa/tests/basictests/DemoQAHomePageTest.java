@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.testng.Assert;
 
-import com.shum.demoqa.pages.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.tests.BaseTest;
 import com.shum.demoqa.utils.TData;
 

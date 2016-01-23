@@ -1,12 +1,11 @@
-package com.shum.demoqa.pages.pageobjects;
+package com.shum.demoqa.page.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
-import com.shum.demoqa.pages.AbstractPage;
+import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.utils.TData;
 
 public class NavigationTabBarPage extends AbstractPage {

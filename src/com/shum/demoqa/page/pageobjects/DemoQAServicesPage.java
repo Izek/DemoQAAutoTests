@@ -1,4 +1,4 @@
-package com.shum.demoqa.pages.pageobjects;
+package com.shum.demoqa.page.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
