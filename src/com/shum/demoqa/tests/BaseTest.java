@@ -15,7 +15,7 @@ public class BaseTest {
 	public void setUp() {
 		wDriver = new FirefoxDriver();
 
-		wDriver.get(TData.HOME_PAGE);
+		//wDriver.get(TData.HOME_PAGE);
 	}
 
 	@After

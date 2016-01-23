@@ -15,11 +15,11 @@ public class NavigationTabBarPage extends AbstractPage {
 
 		this.wDriver = wDriver;
 
-		PageFactory.initElements(wDriver, this);
+		// PageFactory.initElements(wDriver, this);
 
-		if (!isNavTabBarIsVisible()) {
-			throw new PageNotFoundException("Navigaion Bar was not opened!..");
-		}
+		// if (!isNavTabBarIsVisible()) {
+		// throw new PageNotFoundException("Navigaion Bar was not opened!..");
+		// }
 	}
 
 	@FindBy(id = "site_navigation")
@@ -30,16 +30,30 @@ public class NavigationTabBarPage extends AbstractPage {
 	WebElement homeTabButton;
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"About us\"]")
 	WebElement aboutTabButton;
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Services\"]")
+	WebElement servicesTabButton;
 
 	public boolean isNavTabBarIsVisible() {
 		return isElementAppeared(NavigationTabBar, 5);
 	}
 
+	// Methods to OPEN to pages by loading pages with exact address
 	public DemoQAHomePage openDemoQAHomePage() {
-		wDriver.navigate().to(TData.HOME_PAGE);
+		wDriver.get(TData.HOME_PAGE);
 		return new DemoQAHomePage(wDriver);
 	}
 
+	public DemoQAAboutUsPage openDemoQAAboutUsPage() {
+		wDriver.get(TData.ABUOT_US_PAGE);
+		return new DemoQAAboutUsPage(wDriver);
+	}
+
+	public DemoQAServicesPage openDemoQAServicesPage() {
+		wDriver.get(TData.SERVICES_PAGE);
+		return new DemoQAServicesPage(wDriver);
+	}
+
+	// Methods to NAVIGATE to pages by clicking on tab buttons
 	public DemoQAHomePage navigateToHomePage() {
 		homeTabButton.click();
 		return new DemoQAHomePage(wDriver);
@@ -48,5 +62,10 @@ public class NavigationTabBarPage extends AbstractPage {
 	public DemoQAAboutUsPage navigateToAboutUsPage() {
 		aboutTabButton.click();
 		return new DemoQAAboutUsPage(wDriver);
+	}
+
+	public DemoQAServicesPage navigateToServicesPage() {
+		servicesTabButton.click();
+		return new DemoQAServicesPage(wDriver);
 	}
 }

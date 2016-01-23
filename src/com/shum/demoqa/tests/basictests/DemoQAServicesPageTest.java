@@ -7,7 +7,7 @@ import org.junit.Test;
 import com.shum.demoqa.pages.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.tests.BaseTest;
 
-public class DemoQAAboutUsPageTest extends BaseTest {
+public class DemoQAServicesPageTest extends BaseTest {
 
 	@Before
 	public void setUp() {
@@ -18,13 +18,12 @@ public class DemoQAAboutUsPageTest extends BaseTest {
 	public void tearDown() {
 		super.tearDown();
 	}
-	
+
 	@Test
-	public void openDemoQAAboutUsPageTest(){
-		
+	public void servicesPageTest() {
+
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		
-		NavBar.openDemoQAAboutUsPage();
-		
+
+		NavBar.openDemoQAServicesPage();
 	}
 }

@@ -18,7 +18,8 @@ public class AbstractPage {
 	// Returns if element appeared within given timeout
 	public boolean isElementAppeared(WebElement webElement, int time_out) {
 		try {
-			Wait<WebDriver> wait = new FluentWait<WebDriver>(wDriver).withMessage("Element " + "was not found")
+			Wait<WebDriver> wait = new FluentWait<WebDriver>(wDriver)
+					.withMessage("Element " + webElement.toString() + " was not found")
 					.withTimeout(time_out, TimeUnit.SECONDS).pollingEvery(200, TimeUnit.MILLISECONDS)
 					.ignoring(NoSuchElementException.class);
 			wait.until(ExpectedConditions.visibilityOf(webElement));
