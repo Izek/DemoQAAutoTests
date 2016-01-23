@@ -10,19 +10,19 @@ import com.shum.demoqa.exceptions.PageNotFoundException;
 public class DemoQATabsPage extends NavigationTabBarPage {
 
 	public DemoQATabsPage(WebDriver wDriver) {
-	super(wDriver);
+		super(wDriver);
 
-	PageFactory.initElements(wDriver, this);
+		PageFactory.initElements(wDriver, this);
 
-	if (!isDraggablePageOpened()) {
-		throw new PageNotFoundException("'Tabs' page was not opened!");
+		if (!isDraggablePageOpened()) {
+			throw new PageNotFoundException("'Tabs' page was not opened!");
+		}
 	}
-}
 
-@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Tabs\"]")
-WebElement tabsHeader;
+	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Tabs\"]")
+	WebElement tabsHeader;
 
-private boolean isDraggablePageOpened() {
-	return isElementAppeared(tabsHeader, 5);
-}
+	private boolean isDraggablePageOpened() {
+		return isElementAppeared(tabsHeader, 5);
+	}
 }
