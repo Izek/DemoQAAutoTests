@@ -3,13 +3,11 @@ package com.shum.demoqa.tests.basictests;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import com.shum.demoqa.pages.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.tests.BaseTest;
 
-public class DemoQAOpenTest extends BaseTest {
+public class NavigationBarTest extends BaseTest {
 
 	@Before
 	public void setUp() {
@@ -22,10 +20,10 @@ public class DemoQAOpenTest extends BaseTest {
 	}
 
 	@Test
-	public void openDemoQA() {
-
+	public void NavigationThroughTabsTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		Assert.assertTrue(NavBar.isNavTabBarIsVisible(), "NO!!!!!");
+		NavBar.navigateToAboutUsPage().navigateToHomePage().navigateToAboutUsPage().navigateToHomePage()
+				.isHomePageOpened();
 	}
 }

@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.shum.demoqa.utils.TestData;
+import com.shum.demoqa.utils.TData;
 
 public class BaseTest {
 
@@ -15,7 +15,7 @@ public class BaseTest {
 	public void setUp() {
 		wDriver = new FirefoxDriver();
 
-		wDriver.get(TestData.HOME_PAGE);
+		wDriver.get(TData.HOME_PAGE);
 	}
 
 	@After

@@ -14,7 +14,8 @@ import com.shum.demoqa.exceptions.ElementNotFoundException;
 public class AbstractPage {
 
 	protected WebDriver wDriver;
-	
+
+	// Returns if element appeared within given timeout
 	public boolean isElementAppeared(WebElement webElement, int time_out) {
 		try {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(wDriver).withMessage("Element " + "was not found")
@@ -26,5 +27,10 @@ public class AbstractPage {
 			e.printStackTrace();
 			return false;
 		}
+	}
+
+	// Returns Title of current page
+	public String getPageTitle() {
+		return wDriver.getTitle();
 	}
 }
