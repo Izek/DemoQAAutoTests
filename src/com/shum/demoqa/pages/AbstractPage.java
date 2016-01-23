@@ -1,7 +1,30 @@
 package com.shum.demoqa.pages;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+import com.shum.demoqa.exceptions.ElementNotFoundException;
 
 public class AbstractPage {
-	//protected WebDriver wDriver;
+
+	protected WebDriver wDriver;
+	
+	public boolean isElementAppeared(WebElement webElement, int time_out) {
+		try {
+			Wait<WebDriver> wait = new FluentWait<WebDriver>(wDriver).withMessage("Element " + "was not found")
+					.withTimeout(time_out, TimeUnit.SECONDS).pollingEvery(200, TimeUnit.MILLISECONDS)
+					.ignoring(NoSuchElementException.class);
+			wait.until(ExpectedConditions.visibilityOf(webElement));
+			return true;
+		} catch (ElementNotFoundException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }
