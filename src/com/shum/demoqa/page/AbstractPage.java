@@ -15,6 +15,7 @@ public class AbstractPage {
 
 	protected WebDriver wDriver;
 
+	// TODO: Reimplement in future to make it more stable
 	// Returns if element appeared within given timeout
 	public boolean isElementAppeared(WebElement webElement, int time_out) {
 		try {
