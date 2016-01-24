@@ -102,4 +102,26 @@ public class NavigationTabBarPage extends AbstractPage {
 		servicesTabButton.click();
 		return new ServicesPage(wDriver);
 	}
+
+	public DraggablePage navigateToDraggablePage() {
+		demoTabButton.click();
+		draggableTabButton.click();
+		return new DraggablePage(wDriver);
+	}
+
+	public TabsPage navigateToTabsPage() {
+		demoTabButton.click();
+		tabsTabButton.click();
+		return new TabsPage(wDriver);
+	}
+
+	public BlogPage navigateToBlogPage() {
+		blogTabButton.click();
+		return new BlogPage(wDriver);
+	}
+
+	public ContactPage navigateToContactPage() {
+		contactTabButton.click();
+		return new ContactPage(wDriver);
+	}
 }
