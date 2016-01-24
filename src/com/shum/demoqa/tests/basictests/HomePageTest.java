@@ -9,7 +9,7 @@ import com.shum.demoqa.page.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.tests.BaseTest;
 import com.shum.demoqa.utils.TData;
 
-public class DemoQAHomePageTest extends BaseTest {
+public class HomePageTest extends BaseTest {
 
 	@Before
 	public void setUp() {
