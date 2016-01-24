@@ -25,7 +25,7 @@ public class DemoQABlogPage extends NavigationTabBarPage {
 //	WebElement blogHeader;
 	
 	// TODO: Change on different assertion
-	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Blog\"]")
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/ol/li/span[text()=\"Blog\"]")
 	WebElement blogHeader;
 	
 	

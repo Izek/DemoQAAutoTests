@@ -63,9 +63,15 @@ public class NavigationTabBarPage extends AbstractPage {
 	}
 	
 	public DemoQABlogPage openDemoQABlogPage() {
-		wDriver.get(TData.DEMO_BLOG_PAGE);
+		wDriver.get(TData.BLOG_PAGE);
 		return new DemoQABlogPage(wDriver);
 	}
+	
+	public DemoQAContactPage openDemoQAContactPage() {
+		wDriver.get(TData.CONTACT_PAGE);
+		return new DemoQAContactPage(wDriver);
+	}
+	
 
 	// Methods to NAVIGATE to pages by clicking on tab buttons
 	public DemoQAHomePage navigateToHomePage() {

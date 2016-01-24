@@ -21,21 +21,12 @@ public class DemoQAHomePageTest extends BaseTest {
 		super.tearDown();
 	}
 
-	//@Test
-	public void openDemoQA() {
-
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-
-		Assert.assertTrue(NavBar.isNavTabBarIsVisible(), "NO!!!!!");
-	}
-
 	@Test
-	public void openDemoQAHomePageTest() 
-	{
+	public void openDemoQAHomePageTest() {
 		NavigationTabBarPage DemoQAHome = new NavigationTabBarPage(wDriver);
-		
+
 		DemoQAHome.openDemoQAHomePage();
-		
+
 		Assert.assertEquals(DemoQAHome.getPageTitle(), TData.HOME_PAGE_HEADER);
 	}
 }

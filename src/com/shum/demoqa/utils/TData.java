@@ -12,5 +12,7 @@ public class TData {
 	public static final String DEMO_DRAGGABLE_PAGE = "http://demoqa.com/draggable/";
 	public static final String DEMO_TABS_PAGE = "http://demoqa.com/tabs/";
 	
-	public static final String DEMO_BLOG_PAGE = "http://demoqa.com/blog/";
+	public static final String BLOG_PAGE = "http://demoqa.com/blog/";
+	
+	public static final String CONTACT_PAGE = "http://demoqa.com/contact/";
 }
