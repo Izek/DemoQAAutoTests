@@ -37,55 +37,55 @@ public class NavigationTabBarPage extends AbstractPage {
 	}
 
 	// Methods to OPEN to pages by loading pages with exact address
-	public DemoQAHomePage openDemoQAHomePage() {
+	public HomePage openDemoQAHomePage() {
 		wDriver.get(TData.HOME_PAGE);
-		return new DemoQAHomePage(wDriver);
+		return new HomePage(wDriver);
 	}
 
-	public DemoQAAboutUsPage openDemoQAAboutUsPage() {
+	public AboutUsPage openDemoQAAboutUsPage() {
 		wDriver.get(TData.ABOUT_US_PAGE);
-		return new DemoQAAboutUsPage(wDriver);
+		return new AboutUsPage(wDriver);
 	}
 
-	public DemoQAServicesPage openDemoQAServicesPage() {
+	public ServicesPage openDemoQAServicesPage() {
 		wDriver.get(TData.SERVICES_PAGE);
-		return new DemoQAServicesPage(wDriver);
+		return new ServicesPage(wDriver);
 	}
 	
-	public DemoQADraggablePage openDemoQADraggablePage() {
+	public DraggablePage openDemoQADraggablePage() {
 		wDriver.get(TData.DEMO_DRAGGABLE_PAGE);
-		return new DemoQADraggablePage(wDriver);
+		return new DraggablePage(wDriver);
 	}
 	
-	public DemoQATabsPage openDemoQATabsPage() {
+	public TabsPage openDemoQATabsPage() {
 		wDriver.get(TData.DEMO_TABS_PAGE);
-		return new DemoQATabsPage(wDriver);
+		return new TabsPage(wDriver);
 	}
 	
-	public DemoQABlogPage openDemoQABlogPage() {
+	public BlogPage openDemoQABlogPage() {
 		wDriver.get(TData.BLOG_PAGE);
-		return new DemoQABlogPage(wDriver);
+		return new BlogPage(wDriver);
 	}
 	
-	public DemoQAContactPage openDemoQAContactPage() {
+	public ContactPage openDemoQAContactPage() {
 		wDriver.get(TData.CONTACT_PAGE);
-		return new DemoQAContactPage(wDriver);
+		return new ContactPage(wDriver);
 	}
 	
 
 	// Methods to NAVIGATE to pages by clicking on tab buttons
-	public DemoQAHomePage navigateToHomePage() {
+	public HomePage navigateToHomePage() {
 		homeTabButton.click();
-		return new DemoQAHomePage(wDriver);
+		return new HomePage(wDriver);
 	}
 
-	public DemoQAAboutUsPage navigateToAboutUsPage() {
+	public AboutUsPage navigateToAboutUsPage() {
 		aboutTabButton.click();
-		return new DemoQAAboutUsPage(wDriver);
+		return new AboutUsPage(wDriver);
 	}
 
-	public DemoQAServicesPage navigateToServicesPage() {
+	public ServicesPage navigateToServicesPage() {
 		servicesTabButton.click();
-		return new DemoQAServicesPage(wDriver);
+		return new ServicesPage(wDriver);
 	}
 }

@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 
-public class DemoQABlogPage extends NavigationTabBarPage {
+public class BlogPage extends NavigationTabBarPage {
 
-	public DemoQABlogPage(WebDriver wDriver) {
+	public BlogPage(WebDriver wDriver) {
 		super(wDriver);
 
 		PageFactory.initElements(wDriver, this);

@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 
-public class DemoQADraggablePage extends NavigationTabBarPage {
+public class DraggablePage extends NavigationTabBarPage {
 
-	public DemoQADraggablePage(WebDriver wDriver) {
+	public DraggablePage(WebDriver wDriver) {
 		super(wDriver);
 
 		PageFactory.initElements(wDriver, this);
