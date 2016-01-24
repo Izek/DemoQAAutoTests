@@ -1,13 +1,13 @@
-package com.shum.demoqa.tests.basictests;
+package com.shum.demoqa.tests.navbar.basictests;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.shum.demoqa.page.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.tests.BaseTest;
 
-public class ServicesPageTest extends BaseTest {
+public class TabsPageTests extends BaseTest {
 
 	@Before
 	public void setUp() {
@@ -20,14 +20,14 @@ public class ServicesPageTest extends BaseTest {
 	}
 
 	@Test
-	public void openServicesPageTest() {
+	public void openTabsPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openServicesPage();
+		NavBar.openTabsPage();
 	}
 
 	@Test
-	public void navigateToServicesPageTest() {
+	public void navigateToTabsPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openHomePage().navigateToServicesPage();
+		NavBar.openHomePage().navigateToTabsPage();
 	}
 }
