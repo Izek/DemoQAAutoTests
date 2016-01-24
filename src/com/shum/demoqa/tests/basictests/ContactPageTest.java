@@ -18,10 +18,14 @@ public class ContactPageTest extends BaseTest {
 	}
 
 	@Test
-	public void openDemoQAContactPageTest() {
+	public void openContactPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-
 		NavBar.openContactPage();
 	}
 
+	@Test
+	public void navigateToContactPageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavBar.openHomePage().navigateToContactPage();
+	}
 }

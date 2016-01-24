@@ -18,10 +18,15 @@ public class BlogPageTest extends BaseTest {
 	}
 
 	@Test
-	public void openDemoQADraggablePageTest() {
+	public void openBlogPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-
 		NavBar.openBlogPage();
+	}
+	
+	@Test
+	public void navigateToBlogPageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavBar.openHomePage().navigateToBlogPage();
 	}
 
 }

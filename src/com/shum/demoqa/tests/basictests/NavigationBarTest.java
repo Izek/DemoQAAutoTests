@@ -19,20 +19,20 @@ public class NavigationBarTest extends BaseTest {
 		super.tearDown();
 	}
 
-	//@Test
-	public void NavigationThroughTabsTest() {
+	@Test
+	public void navigationThroughTabsTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		NavBar.openHomePage().navigateToAboutUsPage().navigateToHomePage().navigateToAboutUsPage()
-				.navigateToHomePage().isHomePageOpened();
+		NavBar.openHomePage().navigateToAboutUsPage().navigateToServicesPage().navigateToDraggablePage()
+				.navigateToTabsPage().navigateToBlogPage().navigateToContactPage().navigateToHomePage()
+				.isHomePageOpened();
 	}
-	
+
 	@Test
-	public void navigateToTabsPageTest() {
+	public void navigateToDemoTabsPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		
+
 		NavBar.openHomePage().navigateToDraggablePage();
-		
 		NavBar.openHomePage().navigateToTabsPage();
 	}
 }

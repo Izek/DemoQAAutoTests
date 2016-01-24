@@ -20,11 +20,14 @@ public class TabsPageTests extends BaseTest {
 	}
 
 	@Test
-	public void servicesPageTest() {
-
+	public void openTabsPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-
 		NavBar.openTabsPage();
 	}
 
+	@Test
+	public void navigateToTabsPageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavBar.openHomePage().navigateToTabsPage();
+	}
 }

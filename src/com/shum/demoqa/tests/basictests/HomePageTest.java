@@ -22,11 +22,18 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@Test
-	public void openDemoQAHomePageTest() {
-		NavigationTabBarPage DemoQAHome = new NavigationTabBarPage(wDriver);
+	public void openHomePageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavBar.openHomePage();
 
-		DemoQAHome.openHomePage();
+		Assert.assertEquals(NavBar.getPageTitle(), TData.HOME_PAGE_HEADER);
+	}
 
-		Assert.assertEquals(DemoQAHome.getPageTitle(), TData.HOME_PAGE_HEADER);
+	@Test
+	public void navigateToHomePageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavBar.openContactPage().navigateToHomePage();
+
+		Assert.assertEquals(NavBar.getPageTitle(), TData.HOME_PAGE_HEADER);
 	}
 }

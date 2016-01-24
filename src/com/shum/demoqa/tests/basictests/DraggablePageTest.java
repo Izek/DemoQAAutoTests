@@ -18,10 +18,15 @@ public class DraggablePageTest extends BaseTest {
 	}
 
 	@Test
-	public void openDemoQADraggablePageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		
+	public void openDraggablePageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);	
 		NavBar.openDraggablePage();
+	}
+
+	@Test
+	public void navigateToDraggablePageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);	
+		NavBar.openHomePage().navigateToDraggablePage();
 	}
 	
 }

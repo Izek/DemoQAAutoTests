@@ -18,13 +18,16 @@ public class AboutUsPageTest extends BaseTest {
 	public void tearDown() {
 		super.tearDown();
 	}
+
+	@Test
+	public void openAboutUsPageTest() {
+		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavBar.openAboutUsPage();
+	}
 	
 	@Test
-	public void openDemoQAAboutUsPageTest(){
-		
+	public void navigateToAboutUsPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		
-		NavBar.openAboutUsPage();
-		
+		NavBar.openHomePage().navigateToAboutUsPage();
 	}
 }
