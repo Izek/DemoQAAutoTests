@@ -27,10 +27,25 @@ public class NavigationTabBarPage extends AbstractPage {
 	// TabBar buttons
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Home\"]")
 	WebElement homeTabButton;
+
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"About us\"]")
 	WebElement aboutTabButton;
+
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Services\"]")
 	WebElement servicesTabButton;
+
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Demo\"]")
+	WebElement demoTabButton;
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//ul/li/a[@title=\"Draggable\"]")
+	WebElement draggableTabButton;
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//ul/li/a[@title=\"Tabs\"]")
+	WebElement tabsTabButton;
+
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Blog\"]")
+	WebElement blogTabButton;
+
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Contact\"]")
+	WebElement contactTabButton;
 
 	public boolean isNavTabBarIsVisible() {
 		return isElementAppeared(NavigationTabBar, 5);
@@ -51,27 +66,26 @@ public class NavigationTabBarPage extends AbstractPage {
 		wDriver.get(TData.SERVICES_PAGE);
 		return new ServicesPage(wDriver);
 	}
-	
+
 	public DraggablePage openDraggablePage() {
 		wDriver.get(TData.DEMO_DRAGGABLE_PAGE);
 		return new DraggablePage(wDriver);
 	}
-	
+
 	public TabsPage openTabsPage() {
 		wDriver.get(TData.DEMO_TABS_PAGE);
 		return new TabsPage(wDriver);
 	}
-	
+
 	public BlogPage openBlogPage() {
 		wDriver.get(TData.BLOG_PAGE);
 		return new BlogPage(wDriver);
 	}
-	
+
 	public ContactPage openContactPage() {
 		wDriver.get(TData.CONTACT_PAGE);
 		return new ContactPage(wDriver);
 	}
-	
 
 	// Methods to NAVIGATE to pages by clicking on tab buttons
 	public HomePage navigateToHomePage() {
