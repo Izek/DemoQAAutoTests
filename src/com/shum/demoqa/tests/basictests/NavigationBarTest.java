@@ -23,7 +23,7 @@ public class NavigationBarTest extends BaseTest {
 	public void NavigationThroughTabsTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		NavBar.openDemoQAHomePage().navigateToAboutUsPage().navigateToHomePage().navigateToAboutUsPage()
+		NavBar.openHomePage().navigateToAboutUsPage().navigateToHomePage().navigateToAboutUsPage()
 				.navigateToHomePage().isHomePageOpened();
 	}
 }

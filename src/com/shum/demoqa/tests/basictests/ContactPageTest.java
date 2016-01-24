@@ -21,7 +21,7 @@ public class ContactPageTest extends BaseTest {
 	public void openDemoQAContactPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		NavBar.openDemoQAContactPage();
+		NavBar.openContactPage();
 	}
 
 }

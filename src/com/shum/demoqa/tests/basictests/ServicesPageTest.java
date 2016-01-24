@@ -24,6 +24,6 @@ public class ServicesPageTest extends BaseTest {
 
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		NavBar.openDemoQAServicesPage();
+		NavBar.openServicesPage();
 	}
 }

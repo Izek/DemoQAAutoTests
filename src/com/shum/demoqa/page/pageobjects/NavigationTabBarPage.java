@@ -37,37 +37,37 @@ public class NavigationTabBarPage extends AbstractPage {
 	}
 
 	// Methods to OPEN to pages by loading pages with exact address
-	public HomePage openDemoQAHomePage() {
+	public HomePage openHomePage() {
 		wDriver.get(TData.HOME_PAGE);
 		return new HomePage(wDriver);
 	}
 
-	public AboutUsPage openDemoQAAboutUsPage() {
+	public AboutUsPage openAboutUsPage() {
 		wDriver.get(TData.ABOUT_US_PAGE);
 		return new AboutUsPage(wDriver);
 	}
 
-	public ServicesPage openDemoQAServicesPage() {
+	public ServicesPage openServicesPage() {
 		wDriver.get(TData.SERVICES_PAGE);
 		return new ServicesPage(wDriver);
 	}
 	
-	public DraggablePage openDemoQADraggablePage() {
+	public DraggablePage openDraggablePage() {
 		wDriver.get(TData.DEMO_DRAGGABLE_PAGE);
 		return new DraggablePage(wDriver);
 	}
 	
-	public TabsPage openDemoQATabsPage() {
+	public TabsPage openTabsPage() {
 		wDriver.get(TData.DEMO_TABS_PAGE);
 		return new TabsPage(wDriver);
 	}
 	
-	public BlogPage openDemoQABlogPage() {
+	public BlogPage openBlogPage() {
 		wDriver.get(TData.BLOG_PAGE);
 		return new BlogPage(wDriver);
 	}
 	
-	public ContactPage openDemoQAContactPage() {
+	public ContactPage openContactPage() {
 		wDriver.get(TData.CONTACT_PAGE);
 		return new ContactPage(wDriver);
 	}

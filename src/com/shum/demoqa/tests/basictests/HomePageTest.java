@@ -25,7 +25,7 @@ public class HomePageTest extends BaseTest {
 	public void openDemoQAHomePageTest() {
 		NavigationTabBarPage DemoQAHome = new NavigationTabBarPage(wDriver);
 
-		DemoQAHome.openDemoQAHomePage();
+		DemoQAHome.openHomePage();
 
 		Assert.assertEquals(DemoQAHome.getPageTitle(), TData.HOME_PAGE_HEADER);
 	}

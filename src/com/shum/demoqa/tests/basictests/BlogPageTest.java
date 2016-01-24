@@ -21,7 +21,7 @@ public class BlogPageTest extends BaseTest {
 	public void openDemoQADraggablePageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		NavBar.openDemoQABlogPage();
+		NavBar.openBlogPage();
 	}
 
 }
