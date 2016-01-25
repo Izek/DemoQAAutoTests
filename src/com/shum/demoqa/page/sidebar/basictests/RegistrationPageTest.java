@@ -21,7 +21,7 @@ public class RegistrationPageTest extends BaseTest {
 	public void navigateToRegistrtaionPageTest() {
 		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
 
-		NavBar.openHomePage().getSideBar().navigateToRegistrationPage();
+		//NavBar.openHomePage().getSideBar().navigateToRegistrationPage();
 	}
 
 	@Test

@@ -6,8 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
+import com.shum.demoqa.page.Page;
 
-public class RegistrationPage extends SideBarPage {
+public class RegistrationPage extends Page {
 
 	public RegistrationPage(WebDriver wDriver) {
 		super(wDriver);

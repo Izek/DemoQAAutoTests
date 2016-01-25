@@ -3,8 +3,10 @@ package com.shum.demoqa.page.navbar.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.HPage;
 import com.shum.demoqa.page.sidebar.pageobjects.SideBarPage;
 import com.shum.demoqa.utils.TData;
 
@@ -12,6 +14,8 @@ public class NavigationTabBarPage extends AbstractPage {
 
 	public NavigationTabBarPage(WebDriver wDriver) {
 		this.wDriver = wDriver;
+		PageFactory.initElements(wDriver, this);
+		
 	}
 
 	//TODO: Refactor this method
@@ -50,9 +54,9 @@ public class NavigationTabBarPage extends AbstractPage {
 	}
 
 	// Methods to OPEN to pages by loading pages with exact address
-	public HomePage openHomePage() {
+	public HPage openHomePage() {
 		wDriver.get(TData.HOME_PAGE);
-		return new HomePage(wDriver);
+		return new HPage(wDriver);
 	}
 
 	public AboutUsPage openAboutUsPage() {
