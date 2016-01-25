@@ -3,7 +3,6 @@ package com.shum.demoqa.page.navbar.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.HPage;
@@ -12,17 +11,10 @@ import com.shum.demoqa.utils.TData;
 public class NavigationTabBarPage extends AbstractPage {
 
 	public NavigationTabBarPage(WebDriver wDriver) {
-
 		this.wDriver = wDriver;
-
-	//	PageFactory.initElements(wDriver, this);
-
+		
+		// TODO: Reimplement ALL openPage() / navigateToPage() methods of the class
 	}
-
-	// TODO: Refactor this method
-	// public SideBarPage getSideBar() {
-	// return new SideBarPage(wDriver);
-	// }
 
 	@FindBy(id = "site_navigation")
 	WebElement NavigationTabBar;
@@ -59,12 +51,11 @@ public class NavigationTabBarPage extends AbstractPage {
 		wDriver.get(TData.HOME_PAGE);
 		return new HPage(wDriver);
 	}
-	
+
 	public HomePage openHomePage() {
 		wDriver.get(TData.HOME_PAGE);
 		return new HomePage(wDriver);
 	}
-
 
 	public AboutUsPage openAboutUsPage() {
 		wDriver.get(TData.ABOUT_US_PAGE);

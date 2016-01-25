@@ -13,19 +13,16 @@ public class HPage extends Page {
 
 	public HPage(WebDriver wDriver) throws PageNotFoundException {
 		super(wDriver);
-		
-		//this.wDriver = wDriver;
 
-		SideBar = PageFactory.initElements(wDriver, SideBarPage.class);// new SideBarPage(this.wDriver);
-		NavBar = PageFactory.initElements(wDriver, NavigationTabBarPage.class);//new NavigationTabBarPage(this.wDriver);
+		// Page components are initialized at moment of page creation
+		SideBar = PageFactory.initElements(wDriver, SideBarPage.class);
+		NavBar = PageFactory.initElements(wDriver, NavigationTabBarPage.class);
 
-		//PageFactory.initElements(this.wDriver, SideBar);
-		//PageFactory.initElements(this.wDriver, NavBar);
 		PageFactory.initElements(wDriver, this);
 
-		if (!isHPageOpened()) {
-			throw new PageNotFoundException("'Home' page was not opened!");
-					}
+		 if (!isHPageOpened()) {
+		 throw new PageNotFoundException("'Home' page was not opened!");
+		 }
 	}
 
 	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Home\"]")
