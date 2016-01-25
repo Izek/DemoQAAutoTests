@@ -6,19 +6,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.page.AbstractPage;
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.utils.TDSideBar;
 
 public class SideBarPage extends AbstractPage {
 
-	
 	// TODO: Refactor constructor to work without PageFactory
 	public SideBarPage(WebDriver wDriver) {
-	//	super(wDriver);
-		this.wDriver = wDriver; PageFactory.initElements(wDriver, this);
-		//		super(wDriver);
-//
-//		PageFactory.initElements(wDriver, this);
+
+		this.wDriver = wDriver;
+	//	PageFactory.initElements(wDriver, this);
+
 	}
 
 	@FindBy(xpath = "/html/body/div/div/div[@id=\"secondary\"]/aside[@id=\"nav_menu-6\"]/div/h3[text()=\"Registration\"]")

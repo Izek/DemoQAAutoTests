@@ -13,23 +13,25 @@ public class HPage extends Page {
 
 	public HPage(WebDriver wDriver) {
 		super(wDriver);
+		
+		this.wDriver = wDriver;
 
-		SideBar = new SideBarPage(wDriver);
-		NavBar = new NavigationTabBarPage(wDriver);
+		SideBar = PageFactory.initElements(wDriver, SideBarPage.class);// new SideBarPage(this.wDriver);
+		NavBar = PageFactory.initElements(wDriver, NavigationTabBarPage.class);//new NavigationTabBarPage(this.wDriver);
 
-	//	PageFactory.initElements(wDriver, SideBar);
-	//	PageFactory.initElements(wDriver, NavBar);
+		//PageFactory.initElements(this.wDriver, SideBar);
+		//PageFactory.initElements(this.wDriver, NavBar);
 		PageFactory.initElements(wDriver, this);
 
-	//	if (!isHomePageOpened()) {
-	//		throw new PageNotFoundException("'Home' page was not opened!");
-	//	}
+//		if (!isHPageOpened()) {
+//			throw new PageNotFoundException("'Home' page was not opened!");
+//					}
 	}
 
 	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Home\"]")
 	WebElement homeHeader;
 
-	public boolean isHomePageOpened() {
-		return isElementAppeared(homeHeader, 5);
+	public boolean isHPageOpened() {
+		return isElementAppeared(homeHeader, 7);
 	}
 }

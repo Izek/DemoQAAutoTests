@@ -1,7 +1,6 @@
 package com.shum.demoqa.page;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
 import com.shum.demoqa.page.sidebar.pageobjects.SideBarPage;

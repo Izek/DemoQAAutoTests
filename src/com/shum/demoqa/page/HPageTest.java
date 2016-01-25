@@ -22,11 +22,13 @@ public class HPageTest extends BaseTest {
 	public void openHPageTest() {
 		HPage hPage = new HPage(wDriver);
 		
+		hPage.NavBar.openHomePage(); 
+		
 		hPage.NavBar.openHomePage();
 		
 		hPage.SideBar.openRegistrationPage();
 		
-				hPage.NavBar.openHomePage().SideBar.navigateToRegistrationPage();
+				hPage.NavBar.openHPage().SideBar.navigateToRegistrationPage();
 
 		hPage.SideBar.isSideBarPresentOnPage();
 		
