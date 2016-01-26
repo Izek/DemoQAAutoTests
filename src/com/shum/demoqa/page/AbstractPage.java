@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.Wait;
 import com.shum.demoqa.exceptions.ElementNotFoundException;
 
 public class AbstractPage {
+	
+	//TODO: Create Project's documentation
 
 	protected WebDriver wDriver;
 

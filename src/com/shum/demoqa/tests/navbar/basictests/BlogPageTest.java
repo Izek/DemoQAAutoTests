@@ -2,7 +2,7 @@ package com.shum.demoqa.tests.navbar.basictests;
 
 import org.junit.Test;
 
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.tests.BaseTest;
 
 public class BlogPageTest extends BaseTest {
@@ -19,14 +19,14 @@ public class BlogPageTest extends BaseTest {
 
 	@Test
 	public void openBlogPageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openBlogPage();
+		WebPage bPage = new WebPage(wDriver);
+		bPage.getNBar().openBlogPage();
 	}
-	
+
 	@Test
 	public void navigateToBlogPageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openHomePage().navigateToBlogPage();
+		WebPage bPage = new WebPage(wDriver);
+		bPage.getNBar().openHomePage().getNBar().navigateToBlogPage();
 	}
 
 }

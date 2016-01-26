@@ -6,14 +6,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
+import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.sidebar.pageobjects.SideBar;
 
-public class AboutUsPage extends NavigationTabBarPage {
+public class AboutUsPage extends WebPage {
 
 	public AboutUsPage(WebDriver wDriver) throws PageNotFoundException {
 		super(wDriver);
-		
+
+		// Page components are initialized at moment of page creation
+		setSideBar(PageFactory.initElements(wDriver, SideBar.class));
+		setNavBar(PageFactory.initElements(wDriver, NavigationTabBar.class));
+
 		PageFactory.initElements(wDriver, this);
-		
+
 		if (!isAboutUsPageOpened()) {
 			throw new PageNotFoundException("'About us' Page was not opened!");
 		}

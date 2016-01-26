@@ -4,7 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBar;
 import com.shum.demoqa.tests.BaseTest;
 
 public class NavigationBarTest extends BaseTest {
@@ -21,18 +22,17 @@ public class NavigationBarTest extends BaseTest {
 
 	@Test
 	public void navigationThroughTabsTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
+		NavigationTabBar NavBar = new NavigationTabBar(wDriver);
 
-		NavBar.openHomePage().navigateToAboutUsPage().navigateToServicesPage().navigateToDraggablePage()
-				.navigateToTabsPage().navigateToBlogPage().navigateToContactPage().navigateToHomePage()
+		NavBar.openHomePage().getNBar().navigateToAboutUsPage().getNBar().navigateToServicesPage().getNBar().navigateToDraggablePage().getNBar().
+				navigateToTabsPage().getNBar().navigateToBlogPage().getNBar().navigateToContactPage().getNBar().navigateToHomePage()
 				.isHomePageOpened();
 	}
 
 	@Test
 	public void navigateToDemoTabsPageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-
-		NavBar.openHomePage().navigateToDraggablePage();
-		NavBar.openHomePage().navigateToTabsPage();
+		WebPage tPage = new WebPage(wDriver);
+		tPage.getNBar().openHomePage().getNBar().navigateToDraggablePage();
+		tPage.getNBar().openHomePage().getNBar().navigateToTabsPage();
 	}
 }

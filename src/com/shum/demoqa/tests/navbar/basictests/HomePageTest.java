@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.testng.Assert;
 
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.tests.BaseTest;
 import com.shum.demoqa.utils.TData;
 
@@ -23,17 +23,17 @@ public class HomePageTest extends BaseTest {
 
 	@Test
 	public void openHomePageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openHomePage();
+		WebPage hPage = new WebPage(wDriver);
+		hPage.getNBar().openHomePage();
 
-		Assert.assertEquals(NavBar.getPageTitle(), TData.HOME_PAGE_HEADER);
+		Assert.assertEquals(hPage.getPageTitle(), TData.HOME_PAGE_HEADER);
 	}
 
 	@Test
 	public void navigateToHomePageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openContactPage().navigateToHomePage();
+		WebPage hPage = new WebPage(wDriver);
+		hPage.getNBar().openContactPage().getNBar().navigateToHomePage();
 
-		Assert.assertEquals(NavBar.getPageTitle(), TData.HOME_PAGE_HEADER);
+		Assert.assertEquals(hPage.getPageTitle(), TData.HOME_PAGE_HEADER);
 	}
 }

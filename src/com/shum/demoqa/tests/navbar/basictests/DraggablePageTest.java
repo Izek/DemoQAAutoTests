@@ -2,7 +2,7 @@ package com.shum.demoqa.tests.navbar.basictests;
 
 import org.junit.Test;
 
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.tests.BaseTest;
 
 public class DraggablePageTest extends BaseTest {
@@ -19,14 +19,13 @@ public class DraggablePageTest extends BaseTest {
 
 	@Test
 	public void openDraggablePageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);	
-		NavBar.openDraggablePage();
+		WebPage dPage = new WebPage(wDriver);
+		dPage.getNBar().openDraggablePage();
 	}
 
 	@Test
 	public void navigateToDraggablePageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);	
-		NavBar.openHomePage().navigateToDraggablePage();
+		WebPage dPage = new WebPage(wDriver);
+		dPage.getNBar().openHomePage().getNBar().navigateToDraggablePage();
 	}
-	
 }

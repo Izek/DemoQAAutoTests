@@ -4,21 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.utils.TData;
 
-public class NavigationTabBarPage extends AbstractPage {
+public class NavigationTabBar extends AbstractPage {
 
-	public NavigationTabBarPage(WebDriver wDriver) throws PageNotFoundException {
-
+	public NavigationTabBar(WebDriver wDriver) {
 		this.wDriver = wDriver;
 
-		// PageFactory.initElements(wDriver, this);
-
-		// if (!isNavTabBarIsVisible()) {
-		// throw new PageNotFoundException("Navigaion Bar was not opened!..");
-		// }
+		// TODO: Reimplement ALL openPage() / navigateToPage() methods of the
+		// class
 	}
 
 	@FindBy(id = "site_navigation")
