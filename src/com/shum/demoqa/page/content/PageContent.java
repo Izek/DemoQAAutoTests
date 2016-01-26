@@ -7,12 +7,11 @@ import com.shum.demoqa.page.sidebar.SideBar;
 
 public class PageContent extends WebPage {
 
+	// private SideBar SideBar;
 
-	private SideBar SideBar;
-	
 	public PageContent(WebDriver wDriver) {
 		super(wDriver);
-		
+
 		SideBar = new SideBar(wDriver);
 
 	}

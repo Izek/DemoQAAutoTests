@@ -1,8 +1,8 @@
 package com.shum.demoqa.page;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
-import com.shum.demoqa.page.content.PageContent;
 import com.shum.demoqa.page.footer.PageFooter;
 import com.shum.demoqa.page.navbar.NavigationTabBar;
 import com.shum.demoqa.page.sidebar.SideBar;
@@ -15,13 +15,13 @@ public class WebPage extends AbstractPage {
 	// WebPaje object, and each Page object should inherit this initialization
 
 	// Components of the Page: NavigationBar, SideBar, PageFooter
-	private NavigationTabBar NavBar;
+	protected NavigationTabBar NavBar;
 
-	private PageContent pContent;
+	//private PageContent pContent;
 
-	private SideBar SideBar;
+	protected SideBar SideBar;
 
-	private PageFooter pFooter;
+	protected PageFooter pFooter;
 
 	// TODO: Add protected Content Area to PageObject
 
@@ -29,11 +29,17 @@ public class WebPage extends AbstractPage {
 		this.wDriver = wDriver;
 
 		// Objects of WebPage components are initialized when Page is created
-		SideBar = new SideBar(wDriver);
-		NavBar = new NavigationTabBar(wDriver);
+		// SideBar = new SideBar(wDriver);
+		// NavBar = new NavigationTabBar(wDriver);
 
-		pFooter = new PageFooter(wDriver);
-	}
+		// pFooter = new PageFooter(wDriver);
+		
+		SideBar = PageFactory.initElements(wDriver, SideBar.class);
+		NavBar = PageFactory.initElements(wDriver, NavigationTabBar.class);
+		pFooter = PageFactory.initElements(wDriver, PageFooter.class);
+		
+		PageFactory.initElements(wDriver, this);
+		}
 
 	public NavigationTabBar getNBar() {
 		return NavBar;

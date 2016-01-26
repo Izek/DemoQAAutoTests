@@ -7,17 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
-import com.shum.demoqa.page.navbar.NavigationTabBar;
-import com.shum.demoqa.page.sidebar.SideBar;
 
 public class AboutUsPage extends WebPage {
 
 	public AboutUsPage(WebDriver wDriver) throws PageNotFoundException {
 		super(wDriver);
-
-		// Page components are initialized at moment of page creation
-		setSideBar(PageFactory.initElements(wDriver, SideBar.class));
-		setNavBar(PageFactory.initElements(wDriver, NavigationTabBar.class));
 
 		PageFactory.initElements(wDriver, this);
 
