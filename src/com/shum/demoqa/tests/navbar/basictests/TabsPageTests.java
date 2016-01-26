@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBarPage;
+import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.tests.BaseTest;
 
 public class TabsPageTests extends BaseTest {
@@ -21,13 +21,13 @@ public class TabsPageTests extends BaseTest {
 
 	@Test
 	public void openTabsPageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openTabsPage();
+		WebPage tPage = new WebPage(wDriver);
+		tPage.getNBar().openTabsPage();
 	}
 
 	@Test
 	public void navigateToTabsPageTest() {
-		NavigationTabBarPage NavBar = new NavigationTabBarPage(wDriver);
-		NavBar.openHomePage().navigateToTabsPage();
+		WebPage tPage = new WebPage(wDriver);
+		tPage.getNBar().openHomePage().getNBar().navigateToTabsPage();
 	}
 }

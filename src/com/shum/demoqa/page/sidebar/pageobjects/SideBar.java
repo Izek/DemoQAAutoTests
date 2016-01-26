@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.utils.TDSideBar;
 
-public class SideBarPage extends AbstractPage {
+public class SideBar extends AbstractPage {
 
-	public SideBarPage(WebDriver wDriver) {
+	public SideBar(WebDriver wDriver) {
 		this.wDriver = wDriver;
 	}
 

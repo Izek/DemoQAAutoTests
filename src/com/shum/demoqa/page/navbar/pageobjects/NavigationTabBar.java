@@ -5,15 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
-import com.shum.demoqa.page.HPage;
 import com.shum.demoqa.utils.TData;
 
-public class NavigationTabBarPage extends AbstractPage {
+public class NavigationTabBar extends AbstractPage {
 
-	public NavigationTabBarPage(WebDriver wDriver) {
+	public NavigationTabBar(WebDriver wDriver) {
 		this.wDriver = wDriver;
-		
-		// TODO: Reimplement ALL openPage() / navigateToPage() methods of the class
+
+		// TODO: Reimplement ALL openPage() / navigateToPage() methods of the
+		// class
 	}
 
 	@FindBy(id = "site_navigation")
@@ -47,11 +47,6 @@ public class NavigationTabBarPage extends AbstractPage {
 	}
 
 	// Methods to OPEN to pages by loading pages with exact address
-	public HPage openHPage() {
-		wDriver.get(TData.HOME_PAGE);
-		return new HPage(wDriver);
-	}
-
 	public HomePage openHomePage() {
 		wDriver.get(TData.HOME_PAGE);
 		return new HomePage(wDriver);
