@@ -22,7 +22,7 @@ public class AboutUsPageTest extends BaseTest {
 	@Test
 	public void openAboutUsPageTest() {
 		WebPage AUPage = new WebPage(wDriver);
-		AUPage.getNBar().openAboutUsPage();
+		AUPage.getNBar().openAboutUsPage();	
 	}
 	
 	@Test

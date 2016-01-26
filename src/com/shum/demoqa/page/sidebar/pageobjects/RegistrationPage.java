@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.footer.PageFooter;
 import com.shum.demoqa.page.navbar.NavigationTabBar;
 import com.shum.demoqa.page.sidebar.SideBar;
 
@@ -20,6 +21,7 @@ public class RegistrationPage extends WebPage {
 		setSideBar(PageFactory.initElements(wDriver, SideBar.class));
 		setNavBar(PageFactory.initElements(wDriver, NavigationTabBar.class));
 
+		setPFooter(PageFactory.initElements(wDriver, PageFooter.class)); 
 		PageFactory.initElements(wDriver, this);
 
 		if (!isRegistrationPageOpened()) {
