@@ -2,14 +2,15 @@ package com.shum.demoqa.page;
 
 import org.openqa.selenium.WebDriver;
 
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBar;
-import com.shum.demoqa.page.sidebar.pageobjects.SideBar;
+import com.shum.demoqa.page.navbar.NavigationTabBar;
+import com.shum.demoqa.page.sidebar.SideBar;
 
 public class WebPage extends AbstractPage {
 
 	// Components of the Page: NavigationBar, SideBar, ContentArea
 	private NavigationTabBar NavBar;
 	private SideBar SideBar;
+
 
 	// TODO: Add protected Content Area to PageObject
 

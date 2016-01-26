@@ -1,19 +1,23 @@
-package com.shum.demoqa.page.navbar.pageobjects;
+package com.shum.demoqa.page.navbar;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.navbar.pageobjects.AboutUsPage;
+import com.shum.demoqa.page.navbar.pageobjects.BlogPage;
+import com.shum.demoqa.page.navbar.pageobjects.ContactPage;
+import com.shum.demoqa.page.navbar.pageobjects.DraggablePage;
+import com.shum.demoqa.page.navbar.pageobjects.HomePage;
+import com.shum.demoqa.page.navbar.pageobjects.ServicesPage;
+import com.shum.demoqa.page.navbar.pageobjects.TabsPage;
 import com.shum.demoqa.utils.TData;
 
 public class NavigationTabBar extends AbstractPage {
 
 	public NavigationTabBar(WebDriver wDriver) {
 		this.wDriver = wDriver;
-
-		// TODO: Reimplement ALL openPage() / navigateToPage() methods of the
-		// class
 	}
 
 	@FindBy(id = "site_navigation")

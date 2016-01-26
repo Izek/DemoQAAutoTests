@@ -1,10 +1,11 @@
-package com.shum.demoqa.page.sidebar.pageobjects;
+package com.shum.demoqa.page.sidebar;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.sidebar.pageobjects.RegistrationPage;
 import com.shum.demoqa.utils.TDSideBar;
 
 public class SideBar extends AbstractPage {

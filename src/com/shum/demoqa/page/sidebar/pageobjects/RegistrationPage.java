@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
-import com.shum.demoqa.page.navbar.pageobjects.NavigationTabBar;
+import com.shum.demoqa.page.navbar.NavigationTabBar;
+import com.shum.demoqa.page.sidebar.SideBar;
 
 
 public class RegistrationPage extends WebPage {
