@@ -3,9 +3,9 @@ package com.shum.demoqa.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.shum.demoqa.page.content.sidebar.SideBar;
 import com.shum.demoqa.page.footer.PageFooter;
 import com.shum.demoqa.page.navbar.NavigationTabBar;
-import com.shum.demoqa.page.sidebar.SideBar;
 
 public class WebPage extends AbstractPage {
 

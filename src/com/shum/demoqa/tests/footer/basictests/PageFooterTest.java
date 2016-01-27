@@ -1,4 +1,4 @@
-package com.shum.demoqa.page.footer.tests;
+package com.shum.demoqa.tests.footer.basictests;
 
 import org.junit.Test;
 

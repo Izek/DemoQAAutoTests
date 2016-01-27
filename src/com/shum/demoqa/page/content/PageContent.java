@@ -3,7 +3,7 @@ package com.shum.demoqa.page.content;
 import org.openqa.selenium.WebDriver;
 
 import com.shum.demoqa.page.WebPage;
-import com.shum.demoqa.page.sidebar.SideBar;
+import com.shum.demoqa.page.content.sidebar.SideBar;
 
 public class PageContent extends WebPage {
 
