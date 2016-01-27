@@ -3,9 +3,10 @@ package com.shum.demoqa.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.shum.demoqa.page.content.PageContent;
+import com.shum.demoqa.page.content.sidebar.SideBar;
 import com.shum.demoqa.page.footer.PageFooter;
 import com.shum.demoqa.page.navbar.NavigationTabBar;
-import com.shum.demoqa.page.sidebar.SideBar;
 
 public class WebPage extends AbstractPage {
 
@@ -17,9 +18,9 @@ public class WebPage extends AbstractPage {
 	// Components of the Page: NavigationBar, SideBar, PageFooter
 	protected NavigationTabBar NavBar;
 
-	//private PageContent pContent;
+	private PageContent pContent;
 
-	protected SideBar SideBar;
+	//protected SideBar SideBar;
 
 	protected PageFooter pFooter;
 
@@ -34,9 +35,10 @@ public class WebPage extends AbstractPage {
 
 		// pFooter = new PageFooter(wDriver);
 		
-		SideBar = PageFactory.initElements(wDriver, SideBar.class);
+	//	SideBar = PageFactory.initElements(wDriver, SideBar.class);
 		NavBar = PageFactory.initElements(wDriver, NavigationTabBar.class);
 		pFooter = PageFactory.initElements(wDriver, PageFooter.class);
+		pContent = PageFactory.initElements(wDriver, PageContent.class);
 		
 		PageFactory.initElements(wDriver, this);
 		}
@@ -49,13 +51,13 @@ public class WebPage extends AbstractPage {
 		NavBar = nBar;
 	}
 
-	public SideBar getSBar() {
-		return SideBar;
-	}
-
-	protected void setSideBar(SideBar sBar) {
-		SideBar = sBar;
-	}
+//	public SideBar getSBar() {
+//		return SideBar;
+//	}
+//
+//	protected void setSideBar(SideBar sBar) {
+//		SideBar = sBar;
+//	}
 
 	public PageFooter getPFooter() {
 		return pFooter;
