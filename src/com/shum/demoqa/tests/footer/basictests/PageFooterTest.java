@@ -1,10 +1,9 @@
 package com.shum.demoqa.tests.footer.basictests;
 
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.footer.Footer;
@@ -22,73 +21,49 @@ public class PageFooterTest extends BaseTest {
 		super.tearDown();
 	}
 
+	/**
+	 * Verifies if Page footer is present on page by asserting appropriate element
+	 */
 	@Test
-	public void openContentAreaTest() {
+	public void isFooterOnPageTest() {
+		WebPage hPage = new WebPage(wDriver);
+
+		hPage.navBar.openHomePage();
+		hPage.footer.isFooterOnPage();
+	}
+
+	// @Test
+	public void isFooterDescriptionOnPageTest() {
+		WebPage hPage = new WebPage(wDriver);
+
+		hPage.navBar.openHomePage();
+
+		Assert.assertEquals(Footer.footerDescription.getText(),
+				"Selenium is a software testing framework for the web that facilitates the automation of browsers. "
+						+ "The Selenium project produces various tools for automation testing such as Selenium IDE, "
+						+ "Selenium Remote Control (RC), Selenium Grid and Selenium 2.0 & WebDriver. "
+						+ "Learning all the tools will give you many different options for approaching different "
+						+ "automation problems. The entire suits of tools result in a rich set of testing functions "
+						+ "specially geared to the needs of testing of web application of all types.",
+				"Error! Footer's description does not match expected text...");
+	}
+
+	
+	@Test // Asserts if page baseline is present
+	public void isFooterBaseLinePresentOnHomePage() {
 		WebPage homePage = new WebPage(wDriver);
-
-		homePage.navBar.openHomePage().getFooter().isFooterOnPage();
-
-		Footer pFoot = new Footer(wDriver);
-
-		// homePage.navBar.openHomePage().pageFooter.focusOnElement(pFoot.getTwiLink());
 
 		homePage.navBar.openHomePage();
 
-		WebElement aboutTabButton = wDriver.findElement(
-				By.xpath("/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"About us\"]"));
-
-		focusOnElement(aboutTabButton);
-
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	@Test
-	public void openToolTip() {
-
-		WebPage homePage = new WebPage(wDriver);
-
-		homePage.navBar.openHomePage().getFooter().isFooterOnPage();
-
-		WebElement aboutTabButton = wDriver.findElement(
-				By.xpath("/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"About us\"]"));
-
-		String titleText = aboutTabButton.toString();
-
-		System.out.println(titleText);
-		
-		focusOnElement(aboutTabButton);
-
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		System.out.println("Test");
-
-	
-		WebElement wEle = wDriver.findElement(By.cssSelector("li.facebook a.bstooltip"));
-		homePage.footer.focusOnElement(wEle);
-		
-		
-		System.out.println(wEle.getText());
-		
-		homePage.isElementAppeared(Footer.footerHeader, 5);
-		
+		Assert.assertTrue(homePage.isElementAppeared(Footer.footerBaseLine, 5),
+				"Failed!. Baseline is not present on page...");
 	}
 
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
 
-	
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
