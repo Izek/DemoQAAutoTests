@@ -42,9 +42,4 @@ public class Footer extends AbstractPage {
 	public boolean isFooterOnPage() {
 		return isElementAppeared(footerHeader, 5);
 	}
-
-	public void focusOnElement(WebElement webElement) {
-		new Actions(wDriver).moveToElement(webElement).perform();
-	}
-
 }
