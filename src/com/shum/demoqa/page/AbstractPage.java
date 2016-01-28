@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -12,8 +13,8 @@ import org.openqa.selenium.support.ui.Wait;
 import com.shum.demoqa.exceptions.ElementNotFoundException;
 
 public class AbstractPage {
-	
-	//TODO: Create Project's documentation
+
+	// TODO: Create Project's documentation
 
 	protected WebDriver wDriver;
 
@@ -36,5 +37,11 @@ public class AbstractPage {
 	// Returns Title of current page
 	public String getPageTitle() {
 		return wDriver.getTitle();
+	}
+
+	// TODO: Add is element is appeared into theis method
+	// Focuses on the webElement
+	public void focusOnElement(WebElement webElement) {
+		new Actions(wDriver).moveToElement(webElement).perform();
 	}
 }
