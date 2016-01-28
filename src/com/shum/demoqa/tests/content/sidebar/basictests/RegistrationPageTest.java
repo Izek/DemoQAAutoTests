@@ -27,5 +27,13 @@ public class RegistrationPageTest extends BaseTest {
 	public void openRegistrtaionPageTest() {
 		WebPage rPage = new WebPage(wDriver);
 		rPage.getSBar().openRegistrationPage();
+		
+		rPage.pageFooter.isFooterOnPage();
+		
+		rPage.breadCrumbs.isBreadCrumbsPresent();
+		
+		rPage.navBar.isNavTabBarIsVisible();
+		
+		rPage.sideBar.isSideBarPresentOnPage();
 	}
 }

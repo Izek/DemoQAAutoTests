@@ -10,8 +10,6 @@ import com.shum.demoqa.page.navbar.NavigationTabBar;
 
 public class WebPage extends AbstractPage {
 
-	// TODO: Refactor PageContent object, so SideBar should appear there
-
 	// TODO: Change the constructor, so WebElements will be initialized in
 	// WebPaje object, and each Page object should inherit this initialization
 

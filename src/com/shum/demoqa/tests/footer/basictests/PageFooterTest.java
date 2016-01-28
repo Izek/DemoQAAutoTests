@@ -2,7 +2,7 @@ package com.shum.demoqa.tests.footer.basictests;
 
 import org.junit.Test;
 
-import com.shum.demoqa.page.navbar.NavigationTabBar;
+import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.tests.BaseTest;
 
 public class PageFooterTest extends BaseTest {
@@ -19,10 +19,9 @@ public class PageFooterTest extends BaseTest {
 
 	@Test
 	public void openContentAreaTest() {
-		NavigationTabBar homePage = new NavigationTabBar(wDriver);
-		
-//		homePage.getNBar().openHomePage().getPFooter().isFooterOnPage();
-		homePage.openHomePage().getFooter().isFooterOnPage();
+		WebPage homePage = new WebPage(wDriver);
+
+		homePage.navBar.openHomePage().getFooter().isFooterOnPage();
 	}
 	
 }

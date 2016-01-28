@@ -3,7 +3,6 @@ package com.shum.demoqa.tests.content.breadcrumbs;
 import org.junit.Test;
 
 import com.shum.demoqa.page.WebPage;
-import com.shum.demoqa.page.navbar.NavigationTabBar;
 import com.shum.demoqa.tests.BaseTest;
 
 public class BreadCrumbsTests extends BaseTest {
@@ -18,22 +17,10 @@ public class BreadCrumbsTests extends BaseTest {
 		super.tearDown();
 	}
 
-	//@Test
-	public void openContentAreaTest() {
-		NavigationTabBar homePage = new NavigationTabBar(wDriver);
-
-		// homePage.getNBar().openHomePage().getPFooter().isFooterOnPage();
-		homePage.openHomePage().getFooter().isFooterOnPage();
-		
-	}
-	
 	@Test
-		public void openHomePageBreadCrumbTest() {
-			WebPage webPage = new WebPage(wDriver);
-			
-			webPage.navBar.openHomePage().navBar.navigateToDraggablePage();
-			
-			webPage.breadCrumbs.isBreadCrumbsPresent();
-			
-		}
+	public void openHomePageBreadCrumbTest() {
+		WebPage webPage = new WebPage(wDriver);
+
+		webPage.navBar.openContactPage().getBreadCrumbs().isBreadCrumbsPresent();
+	}
 }
