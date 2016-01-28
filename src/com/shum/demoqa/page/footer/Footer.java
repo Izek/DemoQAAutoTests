@@ -2,6 +2,7 @@ package com.shum.demoqa.page.footer;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
@@ -36,10 +37,18 @@ public class Footer extends AbstractPage {
 	WebElement twitterLink;
 
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"gplus\"]/a/i")
-	WebElement googlePlusLink; 
+	WebElement googlePlusLink;
 
 	public boolean isFooterOnPage() {
 		return isElementAppeared(footerHeader, 5);
+	}
+
+	public WebElement getTwiLink() {
+		return twitterLink;
+	}
+
+	public void focusOnElement(WebElement webElement) {
+		new Actions(wDriver).moveToElement(webElement).perform();
 	}
 
 }
