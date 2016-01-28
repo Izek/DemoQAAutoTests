@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
 
-public class PageBreadCrumbs extends AbstractPage {
+public class BreadCrumbs extends AbstractPage {
 
-	public PageBreadCrumbs(WebDriver wDriver) {
+	public BreadCrumbs(WebDriver wDriver) {
 		this.wDriver = wDriver;
 	}
 

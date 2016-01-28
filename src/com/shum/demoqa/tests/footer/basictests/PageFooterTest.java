@@ -22,7 +22,7 @@ public class PageFooterTest extends BaseTest {
 		NavigationTabBar homePage = new NavigationTabBar(wDriver);
 		
 //		homePage.getNBar().openHomePage().getPFooter().isFooterOnPage();
-		homePage.openHomePage().getPFooter().isFooterOnPage();
+		homePage.openHomePage().getFooter().isFooterOnPage();
 	}
 	
 }

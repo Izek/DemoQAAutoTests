@@ -6,7 +6,7 @@ import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.NavigationTabBar;
 import com.shum.demoqa.tests.BaseTest;
 
-public class PageBreadCrumbsTests extends BaseTest {
+public class BreadCrumbsTests extends BaseTest {
 
 	@Override
 	public void setUp() {
@@ -23,14 +23,17 @@ public class PageBreadCrumbsTests extends BaseTest {
 		NavigationTabBar homePage = new NavigationTabBar(wDriver);
 
 		// homePage.getNBar().openHomePage().getPFooter().isFooterOnPage();
-		homePage.openHomePage().getPFooter().isFooterOnPage();
+		homePage.openHomePage().getFooter().isFooterOnPage();
 		
 	}
 	
-	//@Test
+	@Test
 		public void openHomePageBreadCrumbTest() {
 			WebPage webPage = new WebPage(wDriver);
 			
-		
+			webPage.navBar.openHomePage().navBar.navigateToDraggablePage();
+			
+			webPage.breadCrumbs.isBreadCrumbsPresent();
+			
 		}
 }

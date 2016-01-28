@@ -3,9 +3,9 @@ package com.shum.demoqa.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.shum.demoqa.page.content.PageContent;
+import com.shum.demoqa.page.content.breadcrumbs.BreadCrumbs;
 import com.shum.demoqa.page.content.sidebar.SideBar;
-import com.shum.demoqa.page.footer.PageFooter;
+import com.shum.demoqa.page.footer.Footer;
 import com.shum.demoqa.page.navbar.NavigationTabBar;
 
 public class WebPage extends AbstractPage {
@@ -15,14 +15,14 @@ public class WebPage extends AbstractPage {
 	// TODO: Change the constructor, so WebElements will be initialized in
 	// WebPaje object, and each Page object should inherit this initialization
 
-	// Components of the Page: NavigationBar, SideBar, PageFooter
-	protected NavigationTabBar NavBar;
+	// Components of the Page: NavigationBar, SideBar, Footer, BreadCrumbs
+	public NavigationTabBar navBar;
 
-	private PageContent pContent;
+	public SideBar sideBar;
 
-	//protected SideBar SideBar;
+	public Footer pageFooter;
 
-	protected PageFooter pFooter;
+	public BreadCrumbs breadCrumbs;
 
 	// TODO: Add protected Content Area to PageObject
 
@@ -30,41 +30,44 @@ public class WebPage extends AbstractPage {
 		this.wDriver = wDriver;
 
 		// Objects of WebPage components are initialized when Page is created
-		// SideBar = new SideBar(wDriver);
-		// NavBar = new NavigationTabBar(wDriver);
+		navBar = PageFactory.initElements(wDriver, NavigationTabBar.class);
+		sideBar = PageFactory.initElements(wDriver, SideBar.class);
+		breadCrumbs = PageFactory.initElements(wDriver, BreadCrumbs.class);
+		pageFooter = PageFactory.initElements(wDriver, Footer.class);
 
-		// pFooter = new PageFooter(wDriver);
-		
-	//	SideBar = PageFactory.initElements(wDriver, SideBar.class);
-		NavBar = PageFactory.initElements(wDriver, NavigationTabBar.class);
-		pFooter = PageFactory.initElements(wDriver, PageFooter.class);
-		pContent = PageFactory.initElements(wDriver, PageContent.class);
-		
 		PageFactory.initElements(wDriver, this);
-		}
+	}
 
 	public NavigationTabBar getNBar() {
-		return NavBar;
+		return navBar;
 	}
 
 	protected void setNavBar(NavigationTabBar nBar) {
-		NavBar = nBar;
+		this.navBar = nBar;
 	}
 
-//	public SideBar getSBar() {
-//		return SideBar;
-//	}
-//
-//	protected void setSideBar(SideBar sBar) {
-//		SideBar = sBar;
-//	}
-
-	public PageFooter getPFooter() {
-		return pFooter;
+	public SideBar getSBar() {
+		return sideBar;
 	}
 
-	public void setPFooter(PageFooter pFooter) {
-		this.pFooter = pFooter;
+	protected void setSideBar(SideBar sBar) {
+		this.sideBar = sBar;
+	}
+
+	public Footer getFooter() {
+		return pageFooter;
+	}
+
+	protected void setFooter(Footer pFooter) {
+		this.pageFooter = pFooter;
+	}
+
+	public BreadCrumbs getBreadCrumbs() {
+		return breadCrumbs;
+	}
+
+	protected void setBreadCrumbs(BreadCrumbs breadCrumbs) {
+		this.breadCrumbs = breadCrumbs;
 	}
 
 }
