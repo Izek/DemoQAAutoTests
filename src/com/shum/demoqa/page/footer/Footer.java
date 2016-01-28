@@ -32,7 +32,7 @@ public class Footer extends AbstractPage {
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"facebook\"]/a/i")
 	public static WebElement facebookLink;
 
-	@FindBy(xpath = " // /html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"twitter\"]/a/i")
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"twitter\"]/a/i")
 	public static WebElement twitterLink;
 
 	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"gplus\"]/a/i")

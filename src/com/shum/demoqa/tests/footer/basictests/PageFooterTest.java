@@ -22,7 +22,8 @@ public class PageFooterTest extends BaseTest {
 	}
 
 	/**
-	 * Verifies if Page footer is present on page by asserting appropriate element
+	 * Verifies if Page footer is present on page by asserting appropriate
+	 * element
 	 */
 	@Test
 	public void isFooterOnPageTest() {
@@ -32,7 +33,16 @@ public class PageFooterTest extends BaseTest {
 		hPage.footer.isFooterOnPage();
 	}
 
-	// @Test
+	@Test
+	public void isFooterHeaderiOnPageTest() {
+		WebPage hPage = new WebPage(wDriver);
+
+		hPage.navBar.openHomePage();
+
+		Assert.assertEquals(Footer.footerHeader.getText(), "About Us", "Failed!. Footer's header does not match...");
+	}
+
+	@Test
 	public void isFooterDescriptionOnPageTest() {
 		WebPage hPage = new WebPage(wDriver);
 
@@ -48,7 +58,6 @@ public class PageFooterTest extends BaseTest {
 				"Error! Footer's description does not match expected text...");
 	}
 
-	
 	@Test // Asserts if page baseline is present
 	public void isFooterBaseLinePresentOnHomePage() {
 		WebPage homePage = new WebPage(wDriver);
@@ -59,6 +68,30 @@ public class PageFooterTest extends BaseTest {
 				"Failed!. Baseline is not present on page...");
 	}
 
+	@Test
+	public void areSocialMediaButtonsFocusable() {
+		WebPage homePage = new WebPage(wDriver);
+
+		homePage.navBar.openHomePage();
+
+		// TODO: Add focusOnElement(WebElement webElement) method to
+		// AbstractPage class
+
+		focusOnElement(Footer.facebookLink);
+		focusOnElement(Footer.twitterLink);
+		focusOnElement(Footer.googlePlusLink);
+
+	}
+
+	/**
+	 * <h1>Focuses on the <code>WebElement</code> passed to method.</h1>
+	 * 
+	 * Emulates <font color="red">focusing on element or hovering
+	 * mouse</font color="red"> on selected element.
+	 * 
+	 * @param WebElement
+	 * @return 
+	 */
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
 
