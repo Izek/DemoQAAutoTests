@@ -18,7 +18,7 @@ public class WebPage extends AbstractPage {
 
 	public SideBar sideBar;
 
-	public Footer pageFooter;
+	public Footer footer;
 
 	public BreadCrumbs breadCrumbs;
 
@@ -31,7 +31,7 @@ public class WebPage extends AbstractPage {
 		navBar = PageFactory.initElements(wDriver, NavigationTabBar.class);
 		sideBar = PageFactory.initElements(wDriver, SideBar.class);
 		breadCrumbs = PageFactory.initElements(wDriver, BreadCrumbs.class);
-		pageFooter = PageFactory.initElements(wDriver, Footer.class);
+		footer = PageFactory.initElements(wDriver, Footer.class);
 
 		PageFactory.initElements(wDriver, this);
 	}
@@ -53,11 +53,11 @@ public class WebPage extends AbstractPage {
 	}
 
 	public Footer getFooter() {
-		return pageFooter;
+		return footer;
 	}
 
 	protected void setFooter(Footer pFooter) {
-		this.pageFooter = pFooter;
+		this.footer = pFooter;
 	}
 
 	public BreadCrumbs getBreadCrumbs() {

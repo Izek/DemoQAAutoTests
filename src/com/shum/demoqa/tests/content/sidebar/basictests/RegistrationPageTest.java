@@ -28,7 +28,7 @@ public class RegistrationPageTest extends BaseTest {
 		WebPage rPage = new WebPage(wDriver);
 		rPage.getSBar().openRegistrationPage();
 		
-		rPage.pageFooter.isFooterOnPage();
+		rPage.footer.isFooterOnPage();
 		
 		rPage.breadCrumbs.isBreadCrumbsPresent();
 		
