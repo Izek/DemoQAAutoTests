@@ -1,4 +1,4 @@
-package com.shum.demoqa.test.footer.basictests;
+package com.shum.demoqa.test.footer;
 
 import java.util.Iterator;
 import java.util.Set;
