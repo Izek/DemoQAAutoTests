@@ -39,9 +39,18 @@ public class AbstractPage {
 		return wDriver.getTitle();
 	}
 
-	// TODO: Add is element is appeared into theis method
+	// TODO: Add is element is appeared into this method
 	// Focuses on the webElement
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
+	}
+
+	// webDriver will wait for given time in milliseconds
+	public void waitForTime(int milliseconds) {
+		try {
+			Thread.sleep(milliseconds);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
