@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.navbar.data.NavBarData;
 import com.shum.demoqa.page.navbar.pageobjects.AboutUsPage;
 import com.shum.demoqa.page.navbar.pageobjects.BlogPage;
 import com.shum.demoqa.page.navbar.pageobjects.ContactPage;
@@ -52,7 +53,7 @@ public class NavigationTabBar extends AbstractPage {
 
 	// Methods to OPEN to pages by loading pages with exact address
 	public HomePage openHomePage() {
-		wDriver.get(TData.HOME_PAGE);
+		wDriver.get(NavBarData.HOME_PAGE);
 		return new HomePage(wDriver);
 	}
 
