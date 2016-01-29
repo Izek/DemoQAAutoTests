@@ -1,4 +1,4 @@
-package com.shum.demoqa.tests.content.breadcrumbs;
+package com.shum.demoqa.test.content.breadcrumbs;
 
 import org.junit.Test;
 
