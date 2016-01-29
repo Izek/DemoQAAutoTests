@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.footer.data.FooterPageData;
 
 public class Footer extends AbstractPage {
 
@@ -12,30 +13,30 @@ public class Footer extends AbstractPage {
 		this.wDriver = wDriver;
 	}
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]//div/aside/h3[text()=\"About Us\"]")
+	@FindBy(xpath = FooterPageData.FOOTER_HEADER_XPATH_LOCATOR)
 	public static WebElement footerHeader;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div[@class=\"container\"]/div//aside/div[@class=\"textwidget\"]")
+	@FindBy(xpath = FooterPageData.FOOTER_DESCRIPTION_XPATH_LOCATOR)
 	public static WebElement footerDescription;
 
 	// Baseline Locators
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div[@class=\"site-info\"]/p")
+	@FindBy(xpath = FooterPageData.FOOTER_BASELINE_XPATH_LOCATOR)
 	public static WebElement footerBaseLine;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div[@class=\"site-info\"]/p/a[@href=\"http://toolsqa.com/\"]")
+	@FindBy(xpath = FooterPageData.FOOTER_TOOLS_QA_LINK_XPATH_LOCATOR)
 	public static WebElement toolsQALink;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div[@class=\"site-info\"]/p/a[@href=\"http://oneiricindia.com/\"]")
+	@FindBy(xpath = FooterPageData.FOOTER_ONERIC_LINK_XPATH_LOCATOR)
 	public static WebElement oneiricTechLink;
 
 	// SocialMedia links
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"facebook\"]/a/i")
+	@FindBy(xpath = FooterPageData.FOOTER_FACEBOOK_LINK_XPATH_LOCATOR)
 	public static WebElement facebookLink;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"twitter\"]/a/i")
+	@FindBy(xpath = FooterPageData.FOOTER_TWITTER_LINK_XPATH_LOCATOR)
 	public static WebElement twitterLink;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]/footer[@id=\"colophon\"]/div/div/div/aside/ul/li[@class=\"gplus\"]/a/i")
+	@FindBy(xpath = FooterPageData.FOOTER_GOOGLEPLUS_LINK_XPATH_LOCATOR)
 	public static WebElement googlePlusLink;
 
 	public boolean isFooterOnPage() {
