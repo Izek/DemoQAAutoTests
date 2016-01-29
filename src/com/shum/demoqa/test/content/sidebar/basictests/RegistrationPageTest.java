@@ -1,4 +1,4 @@
-package com.shum.demoqa.tests.content.sidebar.basictests;
+package com.shum.demoqa.test.content.sidebar.basictests;
 
 import org.junit.Test;
 

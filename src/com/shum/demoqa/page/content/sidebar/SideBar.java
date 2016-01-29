@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.content.sidebar.data.SideBarData;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
-import com.shum.demoqa.utils.TDSideBar;
 
 public class SideBar extends AbstractPage {
 
@@ -24,7 +24,7 @@ public class SideBar extends AbstractPage {
 	}
 
 	public RegistrationPage openRegistrationPage() {
-		wDriver.get(TDSideBar.REGISTRATION_PAGE);
+		wDriver.get(SideBarData.REGISTRATION_PAGE);
 		return new RegistrationPage(wDriver);
 	}
 
