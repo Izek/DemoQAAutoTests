@@ -19,7 +19,17 @@ public class AbstractPage {
 	protected WebDriver wDriver;
 
 	// TODO: Reimplement in future to make it more stable
-	// Returns if element appeared within given timeout
+	/**
+	 * Returns if element appeared within given timeout ignoring
+	 * <code>NoSuchElementException</code> exception.
+	 * 
+	 * If element not visible or not initialized throws
+	 * <code>ElementNotFound</code> exception.
+	 * 
+	 * @param webElement
+	 * @param time_out
+	 * @return boolean
+	 */
 	public boolean isElementAppeared(WebElement webElement, int time_out) {
 		try {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(wDriver)
@@ -34,18 +44,31 @@ public class AbstractPage {
 		}
 	}
 
-	// Returns Title of current page
+	/**
+	 * Returns current title of page
+	 * 
+	 * @return <code>Sting</code>
+	 */
 	public String getPageTitle() {
 		return wDriver.getTitle();
 	}
 
 	// TODO: Add is element is appeared into this method
-	// Focuses on the webElement
+	/**
+	 * Emulates focus on selected <code>WebElement</code> by mouse. Usually
+	 * intended to show tooltip of <code>WebElement</code>.
+	 * 
+	 * @param webElement
+	 */
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
 	}
 
-	// webDriver will wait for given time in milliseconds
+	/**
+	 * Delays execution of test scenario for given time in milliseconds.
+	 * 
+	 * @param milliseconds
+	 */
 	public void waitForTime(int milliseconds) {
 		try {
 			Thread.sleep(milliseconds);
