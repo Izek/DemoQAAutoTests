@@ -25,26 +25,26 @@ public class NavigationTabBar extends AbstractPage {
 	WebElement NavigationTabBar;
 
 	// TabBar buttons
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Home\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_HOME_TAB_BUTTON)
 	WebElement homeTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"About us\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_ABOUT_TAB_BUTTON)
 	WebElement aboutTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Services\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_SERVICES_TAB_BUTTON)
 	WebElement servicesTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Demo\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_DEMO_TAB_BUTTON)
 	WebElement demoTabButton;
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//ul/li/a[@title=\"Draggable\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_DRAGGABLE_TAB_BUTTON)
 	WebElement draggableTabButton;
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//ul/li/a[@title=\"Tabs\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_TABS_TAB_BUTTON)
 	WebElement tabsTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Blog\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_BLOG_TAB_BUTTON)
 	WebElement blogTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Contact\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_CONTACT_TAB_BUTTON)
 	WebElement contactTabButton;
 
 	public boolean isNavTabBarIsVisible() {
