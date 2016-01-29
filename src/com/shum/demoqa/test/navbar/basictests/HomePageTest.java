@@ -1,4 +1,4 @@
-package com.shum.demoqa.tests.navbar.basictests;
+package com.shum.demoqa.test.navbar.basictests;
 
 import org.junit.After;
 import org.junit.Before;
