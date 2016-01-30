@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.content.sidebar.data.SideBarData;
+import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
 
 public class SideBar extends AbstractPage {
@@ -62,13 +63,25 @@ public class SideBar extends AbstractPage {
 		return isElementAppeared(registrationSBHeader, 5);
 	}
 
+	// Methods to open page directly by opening exact link
 	public RegistrationPage openRegistrationPage() {
 		wDriver.get(SideBarData.REGISTRATION_PAGE);
 		return new RegistrationPage(wDriver);
 	}
 
+	public DraggablePage openDraggablePage() {
+		wDriver.get("http://demoqa.com/draggable/");
+		return new DraggablePage(wDriver);
+	}
+
+	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
 		return new RegistrationPage(wDriver);
+	}
+
+	public DraggablePage navigateToDraggablePage() {
+		draggableLink.click();
+		return new DraggablePage(wDriver);
 	}
 }
