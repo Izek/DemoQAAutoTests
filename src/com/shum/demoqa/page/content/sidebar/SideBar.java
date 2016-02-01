@@ -18,6 +18,7 @@ import com.shum.demoqa.page.content.sidebar.pageobjects.SelectablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.SliderPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.SortablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.TabsPage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.TooltipPage;
 
 public class SideBar extends AbstractPage {
 
@@ -134,6 +135,11 @@ public class SideBar extends AbstractPage {
 		return new TabsPage(wDriver);
 	}
 
+	public TooltipPage openTooltipPage() {
+		wDriver.get(SideBarData.TOOLTIP_PAGE_ADDRESS);
+		return new TooltipPage(wDriver);
+	}
+
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
@@ -193,5 +199,10 @@ public class SideBar extends AbstractPage {
 	public TabsPage navigateToTabsPage() {
 		tabsLink.click();
 		return new TabsPage(wDriver);
+	}
+
+	public TooltipPage navigateToTooltipPage() {
+		tooltipLink.click();
+		return new TooltipPage(wDriver);
 	}
 }
