@@ -12,4 +12,5 @@ public interface SideBarData {
 	public static final String ACCORDION_PAGE_ADDRESS = "http://demoqa.com/accordion/";
 	public static final String AUTOCOMPLETE_PAGE_ADDRESS = "http://demoqa.com/autocomplete/";
 	public static final String DATEPICKER_PAGE_ADDRESS = "http://demoqa.com/datepicker/";
+	public static final String MENU_PAGE_ADDRESS = "http://demoqa.com/menu/";
 }

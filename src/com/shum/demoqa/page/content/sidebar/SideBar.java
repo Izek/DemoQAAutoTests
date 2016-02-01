@@ -11,6 +11,7 @@ import com.shum.demoqa.page.content.sidebar.pageobjects.AutocompletePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DatepickerPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.MenuPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.ResizablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.SelectablePage;
@@ -110,8 +111,16 @@ public class SideBar extends AbstractPage {
 		wDriver.get(SideBarData.AUTOCOMPLETE_PAGE_ADDRESS);
 		return new AutocompletePage(wDriver);
 	}
-	
-	public DatepickerPage openDatepickerPage() { wDriver.get(SideBarData.DATEPICKER_PAGE_ADDRESS); return new DatepickerPage(wDriver);}
+
+	public DatepickerPage openDatepickerPage() {
+		wDriver.get(SideBarData.DATEPICKER_PAGE_ADDRESS);
+		return new DatepickerPage(wDriver);
+	}
+
+	public MenuPage openMenuPage() {
+		wDriver.get(SideBarData.MENU_PAGE_ADDRESS);
+		return new MenuPage(wDriver);
+	}
 
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
@@ -153,10 +162,14 @@ public class SideBar extends AbstractPage {
 		autocompleteLink.click();
 		return new AutocompletePage(wDriver);
 	}
-	
+
 	public DatepickerPage navigateToDatepickerPage() {
 		datepickerLink.click();
 		return new DatepickerPage(wDriver);
 	}
 
+	public MenuPage navigateToMenuPage() {
+		menuLink.click();
+		return new MenuPage(wDriver);
+	}
 }
