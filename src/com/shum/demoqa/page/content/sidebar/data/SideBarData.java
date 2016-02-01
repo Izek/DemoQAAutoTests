@@ -9,4 +9,5 @@ public interface SideBarData {
 	public final static String RESIZABLE_PAGE_ADDRESS = "http://demoqa.com/resizable/";
 	public final static String SELECTABLE_PAGE_ADDRESS = "http://demoqa.com/selectable/";
 	public static final String SORTABLE_PAGE_ADDRESS = "http://demoqa.com/sortable/";
+	public static final String ACCORDION_PAGE_ADDRESS = "http://demoqa.com/accordion/";
 }
