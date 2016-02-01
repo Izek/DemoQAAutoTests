@@ -13,7 +13,6 @@ import com.shum.demoqa.page.navbar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.navbar.pageobjects.HomePage;
 import com.shum.demoqa.page.navbar.pageobjects.ServicesPage;
 import com.shum.demoqa.page.navbar.pageobjects.TabsPage;
-import com.shum.demoqa.utils.TData;
 
 public class NavigationTabBar extends AbstractPage {
 
@@ -53,37 +52,37 @@ public class NavigationTabBar extends AbstractPage {
 
 	// Methods to OPEN to pages by loading pages with exact address
 	public HomePage openHomePage() {
-		wDriver.get(NavBarData.HOME_PAGE);
+		wDriver.get(NavBarData.HOME_PAGE_ADDRESS);
 		return new HomePage(wDriver);
 	}
 
 	public AboutUsPage openAboutUsPage() {
-		wDriver.get(TData.ABOUT_US_PAGE);
+		wDriver.get(NavBarData.ABOUT_US_PAGE_ADDRESS);
 		return new AboutUsPage(wDriver);
 	}
 
 	public ServicesPage openServicesPage() {
-		wDriver.get(TData.SERVICES_PAGE);
+		wDriver.get(NavBarData.SERVICES_PAGE_ADDRESS);
 		return new ServicesPage(wDriver);
 	}
 
 	public DraggablePage openDraggablePage() {
-		wDriver.get(TData.DEMO_DRAGGABLE_PAGE);
+		wDriver.get(NavBarData.DEMO_DRAGGABLE_PAGE_ADDRESS);
 		return new DraggablePage(wDriver);
 	}
 
 	public TabsPage openTabsPage() {
-		wDriver.get(TData.DEMO_TABS_PAGE);
+		wDriver.get(NavBarData.DEMO_TABS_PAGE_ADDRESS);
 		return new TabsPage(wDriver);
 	}
 
 	public BlogPage openBlogPage() {
-		wDriver.get(TData.BLOG_PAGE);
+		wDriver.get(NavBarData.BLOG_PAGE_ADDRESS);
 		return new BlogPage(wDriver);
 	}
 
 	public ContactPage openContactPage() {
-		wDriver.get(TData.CONTACT_PAGE);
+		wDriver.get(NavBarData.CONTACT_PAGE_ADDRESS);
 		return new ContactPage(wDriver);
 	}
 
