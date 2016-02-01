@@ -12,7 +12,7 @@ public class TabsPage extends WebPage {
 	public TabsPage(WebDriver wDriver) {
 		super(wDriver);
 
-		if (!isDraggablePageOpened()) {
+		if (!isTabsPageOpened()) {
 			throw new PageNotFoundException("'Tabs' page was not opened!");
 		}
 	}
@@ -20,7 +20,7 @@ public class TabsPage extends WebPage {
 	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Tabs\"]")
 	WebElement tabsHeader;
 
-	private boolean isDraggablePageOpened() {
+	private boolean isTabsPageOpened() {
 		return isElementAppeared(tabsHeader, 5);
 	}
 }
