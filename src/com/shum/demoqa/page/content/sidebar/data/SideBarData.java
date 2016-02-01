@@ -2,7 +2,7 @@ package com.shum.demoqa.page.content.sidebar.data;
 
 public interface SideBarData {
 
-	// Registration page address
+	// Web addresses for each page accessible from SideBar
 	public final static String REGISTRATION_PAGE_ADDRESS = "http://demoqa.com/registration/";
 	public final static String DRAGGABLE_PAGE_ADDRESS = "http://demoqa.com/draggable/";
 	public final static String DROPABLE_PAGE_ADDRESS = "http://demoqa.com/droppable/";
@@ -11,4 +11,5 @@ public interface SideBarData {
 	public static final String SORTABLE_PAGE_ADDRESS = "http://demoqa.com/sortable/";
 	public static final String ACCORDION_PAGE_ADDRESS = "http://demoqa.com/accordion/";
 	public static final String AUTOCOMPLETE_PAGE_ADDRESS = "http://demoqa.com/autocomplete/";
+	public static final String DATEPICKER_PAGE_ADDRESS = "http://demoqa.com/datepicker/";
 }

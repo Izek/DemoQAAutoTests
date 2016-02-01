@@ -8,6 +8,7 @@ import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.content.sidebar.data.SideBarData;
 import com.shum.demoqa.page.content.sidebar.pageobjects.AccordionPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.AutocompletePage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.DatepickerPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
@@ -109,6 +110,8 @@ public class SideBar extends AbstractPage {
 		wDriver.get(SideBarData.AUTOCOMPLETE_PAGE_ADDRESS);
 		return new AutocompletePage(wDriver);
 	}
+	
+	public DatepickerPage openDatepickerPage() { wDriver.get(SideBarData.DATEPICKER_PAGE_ADDRESS); return new DatepickerPage(wDriver);}
 
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
@@ -149,6 +152,11 @@ public class SideBar extends AbstractPage {
 	public AutocompletePage navigateToAutocompletePage() {
 		autocompleteLink.click();
 		return new AutocompletePage(wDriver);
+	}
+	
+	public DatepickerPage navigateToDatepickerPage() {
+		datepickerLink.click();
+		return new DatepickerPage(wDriver);
 	}
 
 }
