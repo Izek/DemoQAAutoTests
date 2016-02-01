@@ -17,6 +17,7 @@ import com.shum.demoqa.page.content.sidebar.pageobjects.ResizablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.SelectablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.SliderPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.SortablePage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.TabsPage;
 
 public class SideBar extends AbstractPage {
 
@@ -128,6 +129,11 @@ public class SideBar extends AbstractPage {
 		return new SliderPage(wDriver);
 	}
 
+	public TabsPage openTabsPage() {
+		wDriver.get(SideBarData.TABS_PAGE_ADDRESS);
+		return new TabsPage(wDriver);
+	}
+
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
@@ -182,5 +188,10 @@ public class SideBar extends AbstractPage {
 	public SliderPage navigateToSliderPage() {
 		sliderLink.click();
 		return new SliderPage(wDriver);
+	}
+
+	public TabsPage navigateToTabsPage() {
+		tabsLink.click();
+		return new TabsPage(wDriver);
 	}
 }
