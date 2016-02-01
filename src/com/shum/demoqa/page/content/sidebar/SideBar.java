@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.content.sidebar.data.SideBarData;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
 
 public class SideBar extends AbstractPage {
@@ -74,6 +75,11 @@ public class SideBar extends AbstractPage {
 		return new DraggablePage(wDriver);
 	}
 
+	public DroppablePage openDroppablePage() {
+		wDriver.get("http://demoqa.com/droppable/");
+		return new DroppablePage(wDriver);
+	}
+
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
@@ -83,5 +89,10 @@ public class SideBar extends AbstractPage {
 	public DraggablePage navigateToDraggablePage() {
 		draggableLink.click();
 		return new DraggablePage(wDriver);
+	}
+	
+	public DroppablePage navigateToDroppablePage() {
+		droppableLink.click();
+		return new DroppablePage(wDriver);
 	}
 }
