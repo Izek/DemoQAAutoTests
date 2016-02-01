@@ -16,4 +16,5 @@ public interface SideBarData {
 	public static final String SLIDER_PAGE_ADDRESS = "http://demoqa.com/slider/";
 	public static final String TABS_PAGE_ADDRESS = "http://demoqa.com/tabs/";
 	public static final String TOOLTIP_PAGE_ADDRESS = "http://demoqa.com/tooltip/";
+	public static final String FRAMES_AND_WINDOWS_PAGE_ADDRESS = "http://demoqa.com/frames-and-windows/";
 }

@@ -11,6 +11,7 @@ import com.shum.demoqa.page.content.sidebar.pageobjects.AutocompletePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DatepickerPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.FramesAndWindowsPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.MenuPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.ResizablePage;
@@ -140,6 +141,11 @@ public class SideBar extends AbstractPage {
 		return new TooltipPage(wDriver);
 	}
 
+	public FramesAndWindowsPage openFramesAndWindowsPage() {
+		wDriver.get(SideBarData.FRAMES_AND_WINDOWS_PAGE_ADDRESS);
+		return new FramesAndWindowsPage(wDriver);
+	}
+
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
@@ -204,5 +210,10 @@ public class SideBar extends AbstractPage {
 	public TooltipPage navigateToTooltipPage() {
 		tooltipLink.click();
 		return new TooltipPage(wDriver);
+	}
+
+	public FramesAndWindowsPage navigateToFramesAndWindowsPage() {
+		framesAndWindowsLink.click();
+		return new FramesAndWindowsPage(wDriver);
 	}
 }
