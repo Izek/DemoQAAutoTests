@@ -72,12 +72,12 @@ public class SideBar extends AbstractPage {
 	}
 
 	public DraggablePage openDraggablePage() {
-		wDriver.get("http://demoqa.com/draggable/");
+		wDriver.get(SideBarData.DRAGGABLE_PAGE_ADDRESS);
 		return new DraggablePage(wDriver);
 	}
 
 	public DroppablePage openDroppablePage() {
-		wDriver.get("http://demoqa.com/droppable/");
+		wDriver.get(SideBarData.DROPABLE_PAGE_ADDRESS);
 		return new DroppablePage(wDriver);
 	}
 
