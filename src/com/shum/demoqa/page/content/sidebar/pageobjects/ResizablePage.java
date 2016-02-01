@@ -12,7 +12,7 @@ public class ResizablePage extends WebPage {
 	public ResizablePage(WebDriver wDriver) {
 		super(wDriver);
 
-		if (!isRegistrationPageOpened()) {
+		if (!isResizablePageOpened()) {
 			throw new PageNotFoundException("'Resizeble' page was not opened!");
 		}
 	}
@@ -20,7 +20,7 @@ public class ResizablePage extends WebPage {
 	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Resizable\"]")
 	WebElement resizebleHeader;
 
-	public boolean isRegistrationPageOpened() {
+	public boolean isResizablePageOpened() {
 		return isElementAppeared(resizebleHeader, 5);
 	}
 }

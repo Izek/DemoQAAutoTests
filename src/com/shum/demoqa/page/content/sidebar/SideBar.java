@@ -10,6 +10,7 @@ import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.ResizablePage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.SelectablePage;
 
 public class SideBar extends AbstractPage {
 
@@ -86,6 +87,11 @@ public class SideBar extends AbstractPage {
 		return new ResizablePage(wDriver);
 	}
 
+	public SelectablePage openSelectablePage() {
+		wDriver.get(SideBarData.SELECTABLE_PAGE_ADDRESS);
+		return new SelectablePage(wDriver);
+	}
+
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
@@ -105,5 +111,11 @@ public class SideBar extends AbstractPage {
 	public ResizablePage navigateToResizablePage() {
 		resizableLink.click();
 		return new ResizablePage(wDriver);
+	}
+
+	public SelectablePage navigateToSelectablePage() {
+		selectableLink.click();
+		return new SelectablePage(wDriver);
+
 	}
 }
