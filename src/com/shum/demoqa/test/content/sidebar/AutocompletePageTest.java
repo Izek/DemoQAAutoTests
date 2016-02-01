@@ -19,13 +19,15 @@ public class AutocompletePageTest extends BaseTest {
 
 	@Test
 	public void openAutocompletePageTest() {
-		WebPage wPage = new WebPage(wDriver); wPage.sideBar.openAutocompletePage();
+		WebPage wPage = new WebPage(wDriver);
+		wPage.sideBar.openAutocompletePage();
 	}
 
 	@Test
 	public void navigateToAutoompletePageTest() {
-		WebPage wPage = new WebPage(wDriver); wPage.navBar.openHomePage().sideBar.navigateToAutocompletePage();
-		
+		WebPage wPage = new WebPage(wDriver);
+		wPage.navBar.openHomePage().sideBar.navigateToAutocompletePage();
+
 	}
 
 }

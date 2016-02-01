@@ -7,7 +7,6 @@ import com.shum.demoqa.tests.BaseTest;
 
 public class DroppablePageTest extends BaseTest {
 
-	
 	@Override
 	public void setUp() {
 		super.setUp();
@@ -20,19 +19,19 @@ public class DroppablePageTest extends BaseTest {
 
 	@Test
 	public void openDroppablePageTest() {
-		
+
 		WebPage webPage = new WebPage(wDriver);
-		
+
 		webPage.sideBar.openDroppablePage();
 	}
-	
+
 	@Test
 	public void navigateToDroppablePageTest() {
-		
+
 		WebPage webPage = new WebPage(wDriver);
-		
+
 		webPage.navBar.openHomePage();
 		webPage.sideBar.openDroppablePage();
 	}
-	
+
 }

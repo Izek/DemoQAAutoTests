@@ -18,10 +18,15 @@ public class SelectablePageTest extends BaseTest {
 	}
 
 	@Test
-	public void openSelectablePageTest() { WebPage wPage = new WebPage(wDriver); wPage.sideBar.openSelectablePage();
+	public void openSelectablePageTest() {
+		WebPage wPage = new WebPage(wDriver);
+		wPage.sideBar.openSelectablePage();
 	}
 
 	@Test
-	public void navigateToSelectablePage() {  WebPage wPage = new WebPage(wDriver); wPage.navBar.openHomePage(); wPage.sideBar.navigateToSelectablePage();
+	public void navigateToSelectablePage() {
+		WebPage wPage = new WebPage(wDriver);
+		wPage.navBar.openHomePage();
+		wPage.sideBar.navigateToSelectablePage();
 	}
 }
