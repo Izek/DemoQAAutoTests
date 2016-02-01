@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.content.sidebar.data.SideBarData;
 import com.shum.demoqa.page.content.sidebar.pageobjects.AccordionPage;
+import com.shum.demoqa.page.content.sidebar.pageobjects.AutocompletePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
 import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
@@ -104,6 +105,11 @@ public class SideBar extends AbstractPage {
 		return new SortablePage(wDriver);
 	}
 
+	public AutocompletePage openAutocompletePage() {
+		wDriver.get(SideBarData.AUTOCOMPLETE_PAGE_ADDRESS);
+		return new AutocompletePage(wDriver);
+	}
+
 	// Methods to navigate to page by clicking on appropriate link
 	public RegistrationPage navigateToRegistrationPage() {
 		registrationSBLink.click();
@@ -139,4 +145,10 @@ public class SideBar extends AbstractPage {
 		accordionLink.click();
 		return new AccordionPage(wDriver);
 	}
+
+	public AutocompletePage navigateToAutocompletePage() {
+		autocompleteLink.click();
+		return new AutocompletePage(wDriver);
+	}
+
 }
