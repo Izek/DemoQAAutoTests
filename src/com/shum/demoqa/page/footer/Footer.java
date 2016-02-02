@@ -7,6 +7,16 @@ import org.openqa.selenium.support.FindBy;
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.footer.data.FooterPageData;
 
+/**
+ * <code>Footer</code> class contains web elements of page footer, which should
+ * be present on the bottom of each page.
+ * 
+ * <p>
+ * <code>Footer</code> is accessible from <code>WebPage</code> class.
+ * </p>
+ * 
+ * @author shum
+ */
 public class Footer extends AbstractPage {
 
 	public Footer(WebDriver wDriver) {
