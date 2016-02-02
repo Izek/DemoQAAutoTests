@@ -1,5 +1,17 @@
 package com.shum.demoqa.page.content.sidebar.data;
 
+import com.shum.demoqa.page.content.sidebar.SideBar;
+
+/**
+ * <code>SideBarData</code> interface stores constant data, which is used in
+ * <code>SideBarData</code> class.
+ * <p>
+ * Here are stores addresses of each web-page, which are accessible from {@link SideBar}.
+ * </p>
+ * 
+ * @author shum
+ *
+ */
 public interface SideBarData {
 
 	// Web addresses for each page accessible from SideBar
