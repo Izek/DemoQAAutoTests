@@ -1,5 +1,17 @@
 package com.shum.demoqa.page.navbar.data;
 
+import com.shum.demoqa.page.navbar.NavigationTabBar;
+
+/**
+ * <code>NavBarData</code> interface stores constant data, which is used in
+ * <code>NavigationTabBar</code> class.
+ * <p>
+ * Here are stores addresses of each web-page, which are accessible from {@link NavigationTabBar}.
+ * </p>
+ * 
+ * @author shum
+ *
+ */
 public interface NavBarData {
 
 	// Web addresses of pages invoked from Navigation Tab Bar
