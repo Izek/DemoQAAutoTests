@@ -6,8 +6,8 @@ import org.junit.Test;
 import org.testng.Assert;
 
 import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.navbar.data.NavBarData;
 import com.shum.demoqa.tests.BaseTest;
-import com.shum.demoqa.utils.TData;
 
 public class HomePageTest extends BaseTest {
 
@@ -26,7 +26,7 @@ public class HomePageTest extends BaseTest {
 		WebPage hPage = new WebPage(wDriver);
 		hPage.getNBar().openHomePage();
 
-		Assert.assertEquals(hPage.getPageTitle(), TData.HOME_PAGE_HEADER);
+		Assert.assertEquals(hPage.getPageTitle(), NavBarData.HOME_PAGE_HEADER);
 	}
 
 	@Test
@@ -34,6 +34,6 @@ public class HomePageTest extends BaseTest {
 		WebPage hPage = new WebPage(wDriver);
 		hPage.getNBar().openContactPage().getNBar().navigateToHomePage();
 
-		Assert.assertEquals(hPage.getPageTitle(), TData.HOME_PAGE_HEADER);
+		Assert.assertEquals(hPage.getPageTitle(), NavBarData.HOME_PAGE_HEADER);
 	}
 }
