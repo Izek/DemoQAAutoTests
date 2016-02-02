@@ -14,8 +14,6 @@ import com.shum.demoqa.exceptions.ElementNotFoundException;
 
 public class AbstractPage {
 
-	// TODO: Create Project's documentation
-
 	protected WebDriver wDriver;
 
 	// TODO: Reimplement in future to make it more stable
@@ -26,9 +24,9 @@ public class AbstractPage {
 	 * If element not visible or not initialized throws
 	 * <code>ElementNotFound</code> exception.
 	 * 
-	 * @param webElement
-	 * @param time_out
-	 * @return boolean
+	 * @param webElement to locate.
+	 * @param time_out given in milliseconds (int).
+	 * @return Returns boolean, if the element visible or not
 	 */
 	public boolean isElementAppeared(WebElement webElement, int time_out) {
 		try {
