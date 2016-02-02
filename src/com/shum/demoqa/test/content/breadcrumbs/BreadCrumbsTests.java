@@ -23,4 +23,32 @@ public class BreadCrumbsTests extends BaseTest {
 
 		webPage.navBar.openContactPage().getBreadCrumbs().isBreadCrumbsPresent();
 	}
+	
+	@Test
+	public void verifyBreadCrumbsTitleTest() {
+		WebPage webPage = new WebPage(wDriver);
+		
+		webPage.navBar.openContactPage();
+		System.out.println(webPage.breadCrumbs.getBreadCrumbsTitle());
+		
+		webPage.navBar.openTabsPage();
+		System.out.println(webPage.breadCrumbs.getBreadCrumbsTitle());
+		
+		wDriver.get("http://demoqa.com/author/admin/");
+		System.out.println(webPage.breadCrumbs.getBreadCrumbsTitle());
+		
+		
+		wDriver.get("http://demoqa.com/sample-post2/");
+		System.out.println(webPage.breadCrumbs.getBreadCrumbsTitle());
+	}
+	
+	@Test
+	public void returnToHomePageTest() {
+	WebPage webPage = new WebPage(wDriver);
+		
+		webPage.navBar.openContactPage();
+		webPage.breadCrumbs.returnToHomePage();
+		webPage.navBar.navigateToTabsPage();
+		webPage.breadCrumbs.returnToHomePage();
+	}
 }

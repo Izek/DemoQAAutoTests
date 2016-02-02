@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
+import com.shum.demoqa.page.navbar.pageobjects.HomePage;
 
 public class BreadCrumbs extends AbstractPage {
 
@@ -26,7 +27,19 @@ public class BreadCrumbs extends AbstractPage {
 	@FindBy(xpath = BREADCRUMBS + "/li/span[text()=\"Services\"]")
 	WebElement breadCrumbsServices;
 
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/ol[@id=\"breadcrumbs\"]/li[@class=\"active\"]/span")
+	public static WebElement breadCrumbsTitle;
+
 	public boolean isBreadCrumbsPresent() {
 		return isElementAppeared(breadCrumbsLocator, 5);
+	}
+
+	public String getBreadCrumbsTitle() {
+		return breadCrumbsTitle.getText();
+	}
+
+	public HomePage returnToHomePage() {
+		breadCrumpsHomeLink.click();
+		return new HomePage(wDriver);
 	}
 }
