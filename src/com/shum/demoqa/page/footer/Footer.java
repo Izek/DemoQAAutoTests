@@ -49,6 +49,10 @@ public class Footer extends AbstractPage {
 	@FindBy(xpath = FooterPageData.FOOTER_GOOGLEPLUS_LINK_XPATH_LOCATOR)
 	public static WebElement googlePlusLink;
 
+	/** Verifies if Footer is present on page and returns true is so, false if not.
+	 * 
+	 * @return Presence of Footer on exact page.
+	 */
 	public boolean isFooterOnPage() {
 		return isElementAppeared(footerHeader, 5);
 	}
