@@ -8,4 +8,6 @@ public class TODOList {
 	// TODO: Create documentation for Footer.class
 	// TODO: Create documentation for FooterTest.class
 
+	// TODO: Refactor data interfaces for each page objects.
+
 }
