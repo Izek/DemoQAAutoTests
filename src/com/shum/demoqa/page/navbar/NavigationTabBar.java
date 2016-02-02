@@ -13,7 +13,6 @@ import com.shum.demoqa.page.navbar.pageobjects.DraggablePage;
 import com.shum.demoqa.page.navbar.pageobjects.HomePage;
 import com.shum.demoqa.page.navbar.pageobjects.ServicesPage;
 import com.shum.demoqa.page.navbar.pageobjects.TabsPage;
-import com.shum.demoqa.utils.TData;
 
 public class NavigationTabBar extends AbstractPage {
 
@@ -25,26 +24,26 @@ public class NavigationTabBar extends AbstractPage {
 	WebElement NavigationTabBar;
 
 	// TabBar buttons
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Home\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_HOME_TAB_BUTTON)
 	WebElement homeTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"About us\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_ABOUT_TAB_BUTTON)
 	WebElement aboutTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Services\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_SERVICES_TAB_BUTTON)
 	WebElement servicesTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Demo\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_DEMO_TAB_BUTTON)
 	WebElement demoTabButton;
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//ul/li/a[@title=\"Draggable\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_DRAGGABLE_TAB_BUTTON)
 	WebElement draggableTabButton;
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//ul/li/a[@title=\"Tabs\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_TABS_TAB_BUTTON)
 	WebElement tabsTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Blog\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_BLOG_TAB_BUTTON)
 	WebElement blogTabButton;
 
-	@FindBy(xpath = "/html/body/div[@id=\"page\"]//ul[@id=\"menu-primary-menu\"]//a[@title=\"Contact\"]")
+	@FindBy(xpath = NavBarData.NAVBAR_CONTACT_TAB_BUTTON)
 	WebElement contactTabButton;
 
 	public boolean isNavTabBarIsVisible() {
@@ -53,37 +52,37 @@ public class NavigationTabBar extends AbstractPage {
 
 	// Methods to OPEN to pages by loading pages with exact address
 	public HomePage openHomePage() {
-		wDriver.get(NavBarData.HOME_PAGE);
+		wDriver.get(NavBarData.HOME_PAGE_ADDRESS);
 		return new HomePage(wDriver);
 	}
 
 	public AboutUsPage openAboutUsPage() {
-		wDriver.get(TData.ABOUT_US_PAGE);
+		wDriver.get(NavBarData.ABOUT_US_PAGE_ADDRESS);
 		return new AboutUsPage(wDriver);
 	}
 
 	public ServicesPage openServicesPage() {
-		wDriver.get(TData.SERVICES_PAGE);
+		wDriver.get(NavBarData.SERVICES_PAGE_ADDRESS);
 		return new ServicesPage(wDriver);
 	}
 
 	public DraggablePage openDraggablePage() {
-		wDriver.get(TData.DEMO_DRAGGABLE_PAGE);
+		wDriver.get(NavBarData.DEMO_DRAGGABLE_PAGE_ADDRESS);
 		return new DraggablePage(wDriver);
 	}
 
 	public TabsPage openTabsPage() {
-		wDriver.get(TData.DEMO_TABS_PAGE);
+		wDriver.get(NavBarData.DEMO_TABS_PAGE_ADDRESS);
 		return new TabsPage(wDriver);
 	}
 
 	public BlogPage openBlogPage() {
-		wDriver.get(TData.BLOG_PAGE);
+		wDriver.get(NavBarData.BLOG_PAGE_ADDRESS);
 		return new BlogPage(wDriver);
 	}
 
 	public ContactPage openContactPage() {
-		wDriver.get(TData.CONTACT_PAGE);
+		wDriver.get(NavBarData.CONTACT_PAGE_ADDRESS);
 		return new ContactPage(wDriver);
 	}
 
