@@ -12,6 +12,18 @@ import org.openqa.selenium.support.ui.Wait;
 
 import com.shum.demoqa.exceptions.ElementNotFoundException;
 
+/**
+ * <code>AbstractPage</code> class is a superclass for all objects which
+ * describe behavior, elements and actions which could be taken on them.
+ * 
+ * <p>
+ * All methods described here, such as clicking, locating, focusing and getting
+ * any info/values are common for each page object and accessible from anywhere.
+ * </p>
+ * 
+ * @author shum
+ *
+ */
 public class AbstractPage {
 
 	protected WebDriver wDriver;
@@ -24,8 +36,10 @@ public class AbstractPage {
 	 * If element not visible or not initialized throws
 	 * <code>ElementNotFound</code> exception.
 	 * 
-	 * @param webElement to locate.
-	 * @param time_out given in milliseconds (int).
+	 * @param webElement
+	 *            to locate.
+	 * @param time_out
+	 *            given in milliseconds (int).
 	 * @return Returns boolean, if the element visible or not
 	 */
 	public boolean isElementAppeared(WebElement webElement, int time_out) {
