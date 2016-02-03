@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
-import com.shum.demoqa.page.navbar.pageobjects.HomePage;
+import com.shum.demoqa.page.navbar.pages.HomePage;
 
 public class BreadCrumbs extends AbstractPage {
 
