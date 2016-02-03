@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
-import com.shum.demoqa.page.navbar.data.homepage.HomePageData;
+import com.shum.demoqa.page.navbar.data.pageobjects.HomePageData;
 
 public class HomePage extends WebPage {
 
