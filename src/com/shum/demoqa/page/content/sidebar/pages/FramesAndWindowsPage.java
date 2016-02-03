@@ -1,4 +1,4 @@
-package com.shum.demoqa.page.content.sidebar.pageobjects;
+package com.shum.demoqa.page.content.sidebar.pages;
 
 import org.openqa.selenium.WebDriver;
 

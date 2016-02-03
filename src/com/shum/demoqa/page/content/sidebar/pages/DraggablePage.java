@@ -1,4 +1,4 @@
-package com.shum.demoqa.page.navbar.pageobjects;
+package com.shum.demoqa.page.content.sidebar.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,10 +17,10 @@ public class DraggablePage extends WebPage {
 		}
 	}
 
-	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Draggable\"]")
+	@FindBy(xpath = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/header/h1[text()=\"Draggable\"]")
 	WebElement draggableHeader;
 
-	private boolean isDraggablePageOpened() {
+	public boolean isDraggablePageOpened() {
 		return isElementAppeared(draggableHeader, 5);
 	}
 }
