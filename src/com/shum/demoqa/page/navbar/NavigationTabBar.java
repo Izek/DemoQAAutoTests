@@ -6,13 +6,13 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.navbar.data.NavBarData;
-import com.shum.demoqa.page.navbar.pageobjects.AboutUsPage;
-import com.shum.demoqa.page.navbar.pageobjects.BlogPage;
-import com.shum.demoqa.page.navbar.pageobjects.ContactPage;
-import com.shum.demoqa.page.navbar.pageobjects.DraggablePage;
-import com.shum.demoqa.page.navbar.pageobjects.HomePage;
-import com.shum.demoqa.page.navbar.pageobjects.ServicesPage;
-import com.shum.demoqa.page.navbar.pageobjects.TabsPage;
+import com.shum.demoqa.page.navbar.pages.AboutUsPage;
+import com.shum.demoqa.page.navbar.pages.BlogPage;
+import com.shum.demoqa.page.navbar.pages.ContactPage;
+import com.shum.demoqa.page.navbar.pages.DraggablePage;
+import com.shum.demoqa.page.navbar.pages.HomePage;
+import com.shum.demoqa.page.navbar.pages.ServicesPage;
+import com.shum.demoqa.page.navbar.pages.TabsPage;
 
 public class NavigationTabBar extends AbstractPage {
 
