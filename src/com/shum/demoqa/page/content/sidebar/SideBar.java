@@ -6,20 +6,20 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.content.sidebar.data.SideBarData;
-import com.shum.demoqa.page.content.sidebar.pageobjects.AccordionPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.AutocompletePage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.DatepickerPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.DraggablePage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.DroppablePage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.FramesAndWindowsPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.MenuPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.RegistrationPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.ResizablePage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.SelectablePage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.SliderPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.SortablePage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.TabsPage;
-import com.shum.demoqa.page.content.sidebar.pageobjects.TooltipPage;
+import com.shum.demoqa.page.content.sidebar.pages.AccordionPage;
+import com.shum.demoqa.page.content.sidebar.pages.AutocompletePage;
+import com.shum.demoqa.page.content.sidebar.pages.DatepickerPage;
+import com.shum.demoqa.page.content.sidebar.pages.DraggablePage;
+import com.shum.demoqa.page.content.sidebar.pages.DroppablePage;
+import com.shum.demoqa.page.content.sidebar.pages.FramesAndWindowsPage;
+import com.shum.demoqa.page.content.sidebar.pages.MenuPage;
+import com.shum.demoqa.page.content.sidebar.pages.RegistrationPage;
+import com.shum.demoqa.page.content.sidebar.pages.ResizablePage;
+import com.shum.demoqa.page.content.sidebar.pages.SelectablePage;
+import com.shum.demoqa.page.content.sidebar.pages.SliderPage;
+import com.shum.demoqa.page.content.sidebar.pages.SortablePage;
+import com.shum.demoqa.page.content.sidebar.pages.TabsPage;
+import com.shum.demoqa.page.content.sidebar.pages.TooltipPage;
 
 public class SideBar extends AbstractPage {
 
