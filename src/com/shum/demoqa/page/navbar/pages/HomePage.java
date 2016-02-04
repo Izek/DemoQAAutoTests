@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.navbar.data.pageobjects.HomePageData;
 
 public class HomePage extends WebPage {
 
@@ -17,7 +18,7 @@ public class HomePage extends WebPage {
 		}
 	}
 
-	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Home\"]")
+	@FindBy(xpath = HomePageData.HOME_PAGE_HEADER_XPATH)
 	WebElement homeHeader;
 
 	public boolean isHomePageOpened() {

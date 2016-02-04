@@ -2,11 +2,14 @@ package com.shum.demoqa.page.navbar.data;
 
 import com.shum.demoqa.page.navbar.NavigationTabBar;
 
+// TODO: Implement each page(page-object in separate branch for NavBar pages.
+
 /**
  * <code>NavBarData</code> interface stores constant data, which is used in
  * <code>NavigationTabBar</code> class.
  * <p>
- * Here are stores addresses of each web-page, which are accessible from {@link NavigationTabBar}.
+ * Here are stores addresses of each web-page, which are accessible from
+ * {@link NavigationTabBar}.
  * </p>
  * 
  * @author shum
