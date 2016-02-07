@@ -21,8 +21,37 @@ public class HomePage extends WebPage {
 	@FindBy(xpath = HomePageData.HOME_PAGE_HEADER_XPATH)
 	WebElement homeHeader;
 
+	// Description section
+	@FindBy(xpath = HomePageData.HOME_PAGE_UNIQUE_AND_CLEAN_IMG_XPATH)
+	WebElement hPageUniqueAndCleanIMG;
+	@FindBy(xpath = HomePageData.HOME_PAGE_CUSTOMER_SUPPORT_IMG_XPATH)
+	WebElement hPageCustomerSupportIMG;
+	@FindBy(xpath = HomePageData.HOME_PAGE_VERY_FLEXIBLE_IMG_XPATH)
+	WebElement hPageVeryFlexibleIMG;
+
+	@FindBy(xpath = HomePageData.HOME_PAGE_UNIQUE_AND_CLEAN_DESCR_XPATH)
+	WebElement hPageUniqueAndCleanDescr;
+	@FindBy(xpath = HomePageData.HOME_PAGE_CUSTOMER_SUPPORT_DESCR_XPATH)
+	WebElement hPageCustomerSupportDescr;
+	@FindBy(xpath = HomePageData.HOME_PAGE_VERY_FLEXIBLE_DESCR_XPATH)
+	WebElement hPageVeryFlexibleDescr;
+
+	// TabBar buttons section
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_ONE)
+	WebElement tabButtonOne;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_TWO)
+	WebElement tabButtonTwo;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_THREE)
+	WebElement tabButtonThree;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_FOUR)
+	WebElement tabButtonFour;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_FIVE)
+	WebElement tabButtonFive;
+
 	public boolean isHomePageOpened() {
 		return isElementAppeared(homeHeader, 5);
 	}
+	
+	
 
 }

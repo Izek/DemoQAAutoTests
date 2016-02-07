@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.navbar.pages.HomePage;
 import com.shum.demoqa.tests.BaseTest;
 
 public class HomePageElementsTest extends BaseTest {
@@ -30,6 +31,14 @@ public class HomePageElementsTest extends BaseTest {
 	hPage.focusOnElement(imageLogo);
 	hPage.waitForTime(2000);
 	
+	imageLogo.click();
+	
+	wDriver.getCurrentUrl();
+	
+	wDriver.navigate().back();
+	
+	HomePage homePage = new HomePage(wDriver);
+	homePage.isHomePageOpened();
 	}
 
 }
