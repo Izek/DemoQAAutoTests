@@ -1,4 +1,4 @@
-package com.shum.demoqa.test.navbar.homepage;
+package com.shum.demoqa.test.navbar.pages;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
