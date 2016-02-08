@@ -51,7 +51,25 @@ public class HomePage extends WebPage {
 	public boolean isHomePageOpened() {
 		return isElementAppeared(homeHeader, 5);
 	}
+
+	public void focusOnUniqueImage() {
+		focusOnElement(hPageUniqueAndCleanIMG);
+		this.waitForTime(500);
+	}
+
+	public void focusOnCustomerSupportImage() {
+		focusOnElement(hPageCustomerSupportIMG);
+		this.waitForTime(500);
+	}
+
+	public void focusOnVeryFlexibleImage() {
+		focusOnElement(hPageVeryFlexibleIMG);
+		this.waitForTime(500);
+	}
 	
-	
+	public WebPage clickOnImage() {
+		hPageUniqueAndCleanIMG.click();
+		return new WebPage(wDriver);
+	}
 
 }

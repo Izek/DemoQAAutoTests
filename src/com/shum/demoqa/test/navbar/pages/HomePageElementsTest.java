@@ -20,25 +20,47 @@ public class HomePageElementsTest extends BaseTest {
 		super.tearDown();
 	}
 
-	@Test
+	// @Test
 	public void focusOnElementsTest() {
-	WebPage hPage = new WebPage(wDriver);
-	
-	hPage.navBar.openHomePage();
-	
-	WebElement imageLogo = wDriver.findElement(By.xpath("/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div/p/a"));
-	
-	hPage.focusOnElement(imageLogo);
-	hPage.waitForTime(2000);
-	
-	imageLogo.click();
-	
-	wDriver.getCurrentUrl();
-	
-	wDriver.navigate().back();
-	
-	HomePage homePage = new HomePage(wDriver);
-	homePage.isHomePageOpened();
+		WebPage hPage = new WebPage(wDriver);
+
+		hPage.navBar.openHomePage();
+
+		WebElement imageLogo = wDriver.findElement(By.xpath(
+				"/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div/p/a"));
+
+		hPage.focusOnElement(imageLogo);
+		hPage.waitForTime(2000);
+
+		imageLogo.click();
+
+		wDriver.getCurrentUrl();
+
+		wDriver.navigate().back();
+
+		HomePage homePage = new HomePage(wDriver);
+		homePage.isHomePageOpened();
+	}
+
+	@Test
+	public void descriptionContentTest() {
+
+		WebPage wPage = new WebPage(wDriver);
+		wPage.navBar.openHomePage();
+
+		HomePage hPage = new HomePage(wDriver);
+
+		hPage.waitForTime(2000);
+		hPage.focusOnCustomerSupportImage();
+		hPage.focusOnUniqueImage();
+		hPage.focusOnVeryFlexibleImage();
+
+		wPage = hPage.clickOnImage();
+
+		hPage.waitForTime(2000);
+
+		wDriver.navigate().back();
+		hPage.isHomePageOpened();
 	}
 
 }
