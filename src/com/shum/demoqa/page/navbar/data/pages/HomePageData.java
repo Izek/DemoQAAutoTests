@@ -35,5 +35,12 @@ public interface HomePageData {
 	public final static String HOME_PAGE_TABBAR_TAB_THREE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 3 \"]";
 	public final static String HOME_PAGE_TABBAR_TAB_FOUR = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 4 \"]";
 	public final static String HOME_PAGE_TABBAR_TAB_FIVE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 5 \"]";
-
+	
+	// Home page TabBar tab content 
+	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div/b";
+	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_ONE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div[@id=\"tabs-1\"]/b";
+	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_TWO = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div[@id=\"tabs-2\"]/b";
+	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_THREE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div[@id=\"tabs-3\"]/b";
+	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_FOUR = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div[@id=\"tabs-4\"]/b";
+	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_FIVE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div[@id=\"tabs-5\"]/b";
 }

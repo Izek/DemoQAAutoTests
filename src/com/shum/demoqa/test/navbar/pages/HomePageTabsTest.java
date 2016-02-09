@@ -2,7 +2,6 @@ package com.shum.demoqa.test.navbar.pages;
 
 import org.junit.Test;
 
-import com.shum.demoqa.page.AbstractPage;
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.pages.HomePage;
 import com.shum.demoqa.tests.BaseTest;
