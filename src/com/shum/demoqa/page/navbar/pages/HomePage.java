@@ -22,7 +22,7 @@ public class HomePage extends WebPage {
 	WebElement homeHeader;
 
 	// Headers description section
-	
+
 	// Description section
 	@FindBy(xpath = HomePageData.HOME_PAGE_UNIQUE_AND_CLEAN_HEADER_XPATH)
 	WebElement hPageUniqueAndCleanHeader;
@@ -61,7 +61,7 @@ public class HomePage extends WebPage {
 		return isElementAppeared(homeHeader, 5);
 	}
 
-	//Get Description headers
+	// Get Description headers
 	public String getUniqueDescrHeader() {
 		return hPageUniqueAndCleanHeader.getText();
 	}
@@ -73,7 +73,7 @@ public class HomePage extends WebPage {
 	public String getVeryFlexibleDescrHeader() {
 		return hPageVeryFlexibleHeader.getText();
 	}
-	
+
 	// Get Description of images
 	public String getUniqueDescr() {
 		return hPageUniqueAndCleanDescr.getText();
@@ -117,6 +117,31 @@ public class HomePage extends WebPage {
 	public WebPage clickOnVeryFlexibleImage() {
 		hPageVeryFlexibleIMG.click();
 		return new WebPage(wDriver);
+	}
+
+	public void clickOnTabOne() {
+		focusOnElement(tabButtonOne);
+		tabButtonOne.click();
+	}
+
+	public void clickOnTabTwo() {
+		focusOnElement(tabButtonTwo);
+		tabButtonTwo.click();
+	}
+
+	public void clickOnTabThree() {
+		focusOnElement(tabButtonThree);
+		tabButtonThree.click();
+	}
+
+	public void clickOnTabFour() {
+		focusOnElement(tabButtonFour);
+		tabButtonFour.click();
+	}
+
+	public void clickOnTabFive() {
+		focusOnElement(tabButtonFive);
+		tabButtonFive.click();
 	}
 
 }
