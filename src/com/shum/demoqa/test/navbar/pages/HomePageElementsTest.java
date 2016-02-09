@@ -55,12 +55,17 @@ public class HomePageElementsTest extends BaseTest {
 		hPage.focusOnUniqueImage();
 		hPage.focusOnVeryFlexibleImage();
 
-		wPage = hPage.clickOnImage();
+		wPage = hPage.clickOnCustomerSupportImage();
 
 		hPage.waitForTime(2000);
 
 		wDriver.navigate().back();
 		hPage.isHomePageOpened();
+		
+		hPage.focusOnCustomerSupportImage();
+		wPage = hPage.clickOnCustomerSupportImage();
+		
+		
 	}
 
 }

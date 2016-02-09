@@ -66,9 +66,19 @@ public class HomePage extends WebPage {
 		focusOnElement(hPageVeryFlexibleIMG);
 		this.waitForTime(500);
 	}
-	
-	public WebPage clickOnImage() {
+
+	public WebPage clickOnUniqueImage() {
 		hPageUniqueAndCleanIMG.click();
+		return new WebPage(wDriver);
+	}
+
+	public WebPage clickOnCustomerSupportImage() {
+		hPageCustomerSupportIMG.click();
+		return new WebPage(wDriver);
+	}
+
+	public WebPage clickOnVeryFlexibleImage() {
+		hPageVeryFlexibleIMG.click();
 		return new WebPage(wDriver);
 	}
 
