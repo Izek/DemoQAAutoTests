@@ -21,7 +21,16 @@ public class HomePage extends WebPage {
 	@FindBy(xpath = HomePageData.HOME_PAGE_HEADER_XPATH)
 	WebElement homeHeader;
 
+	// Headers description section
+	
 	// Description section
+	@FindBy(xpath = HomePageData.HOME_PAGE_UNIQUE_AND_CLEAN_HEADER_XPATH)
+	WebElement hPageUniqueAndCleanHeader;
+	@FindBy(xpath = HomePageData.HOME_PAGE_CUSTOMER_SUPPORT_HEADER_XPATH)
+	WebElement hPageCustomerSupportHeader;
+	@FindBy(xpath = HomePageData.HOME_PAGE_VERY_FLEXIBLE_HEADER_XPATH)
+	WebElement hPageVeryFlexibleHeader;
+
 	@FindBy(xpath = HomePageData.HOME_PAGE_UNIQUE_AND_CLEAN_IMG_XPATH)
 	WebElement hPageUniqueAndCleanIMG;
 	@FindBy(xpath = HomePageData.HOME_PAGE_CUSTOMER_SUPPORT_IMG_XPATH)
@@ -52,6 +61,33 @@ public class HomePage extends WebPage {
 		return isElementAppeared(homeHeader, 5);
 	}
 
+	//Get Description headers
+	public String getUniqueDescrHeader() {
+		return hPageUniqueAndCleanHeader.getText();
+	}
+
+	public String getCustomerSupportDescrHeader() {
+		return hPageCustomerSupportHeader.getText();
+	}
+
+	public String getVeryFlexibleDescrHeader() {
+		return hPageVeryFlexibleHeader.getText();
+	}
+	
+	// Get Description of images
+	public String getUniqueDescr() {
+		return hPageUniqueAndCleanDescr.getText();
+	}
+
+	public String getCustomerSupportDescr() {
+		return hPageCustomerSupportDescr.getText();
+	}
+
+	public String getVeryFlexibleDescr() {
+		return hPageVeryFlexibleDescr.getText();
+	}
+
+	// Focus on image methods
 	public void focusOnUniqueImage() {
 		focusOnElement(hPageUniqueAndCleanIMG);
 		this.waitForTime(500);
@@ -67,6 +103,7 @@ public class HomePage extends WebPage {
 		this.waitForTime(500);
 	}
 
+	// Click on image methods
 	public WebPage clickOnUniqueImage() {
 		hPageUniqueAndCleanIMG.click();
 		return new WebPage(wDriver);
