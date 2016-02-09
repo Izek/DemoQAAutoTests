@@ -8,4 +8,6 @@ public class TODOList {
 	// TODO: Create documentation for Footer.class
 	// TODO: Create documentation for FooterTest.class
 
+	// TODO: Create method to return page content header.
+	// TODO: Should be implemented in WebPage.class. Should return String value.
 }
