@@ -119,29 +119,38 @@ public class HomePage extends WebPage {
 		return new WebPage(wDriver);
 	}
 
-	public void clickOnTabOne() {
+	// Tabs clicking methods
+	public HomePage clickOnTabOne() {
 		focusOnElement(tabButtonOne);
-		tabButtonOne.click();
+		tabButtonOne.click(); return this;
 	}
 
-	public void clickOnTabTwo() {
+	public HomePage clickOnTabTwo() {
 		focusOnElement(tabButtonTwo);
-		tabButtonTwo.click();
+		tabButtonTwo.click();return this;
 	}
 
-	public void clickOnTabThree() {
+	public HomePage clickOnTabThree() {
 		focusOnElement(tabButtonThree);
-		tabButtonThree.click();
+		tabButtonThree.click();return this;
 	}
 
-	public void clickOnTabFour() {
+	public HomePage clickOnTabFour() {
 		focusOnElement(tabButtonFour);
-		tabButtonFour.click();
+		tabButtonFour.click();return this;
 	}
 
-	public void clickOnTabFive() {
+	public HomePage clickOnTabFive() {
 		focusOnElement(tabButtonFive);
-		tabButtonFive.click();
+		tabButtonFive.click();return this;
 	}
+	
+	public WebElement getTabOne() { return tabButtonOne; }
+	
+	public boolean isTabActive(WebElement tabElement)
+	{
+		return false;
+	}
+	
 
 }

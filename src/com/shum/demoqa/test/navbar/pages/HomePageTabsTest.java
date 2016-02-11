@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.pages.HomePage;
-import com.shum.demoqa.test.navbar.data.pages.HomePageDataTest;
 import com.shum.demoqa.tests.BaseTest;
 
 public class HomePageTabsTest extends BaseTest {
@@ -42,5 +41,7 @@ public class HomePageTabsTest extends BaseTest {
 
 		hPage.clickOnTabFour();
 		System.out.println(tHeaderOne.getAttribute("aria-hidden"));
+		
+		hPage.isTabActive(hPage.getTabOne());
 	}
 }
