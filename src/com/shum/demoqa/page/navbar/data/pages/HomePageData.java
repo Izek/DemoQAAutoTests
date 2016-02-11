@@ -30,11 +30,20 @@ public interface HomePageData {
 
 	public final static String  HOME_PAGE_TABBAR_HOVERED_TAB = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul/li[contains(@class, 'ui-state-hover')]";
 
-	public final static String HOME_PAGE_TABBAR_TAB_ONE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 1 \"]";
-	public final static String HOME_PAGE_TABBAR_TAB_TWO = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 2 \"]";
-	public final static String HOME_PAGE_TABBAR_TAB_THREE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 3 \"]";
-	public final static String HOME_PAGE_TABBAR_TAB_FOUR = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 4 \"]";
-	public final static String HOME_PAGE_TABBAR_TAB_FIVE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 5 \"]";
+	//public final static String HOME_PAGE_TABBAR_TAB_ONE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 1 \"]";
+	//public final static String HOME_PAGE_TABBAR_TAB_TWO = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 2 \"]";
+	//public final static String HOME_PAGE_TABBAR_TAB_THREE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 3 \"]";
+	//public final static String HOME_PAGE_TABBAR_TAB_FOUR = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 4 \"]";
+	//public final static String HOME_PAGE_TABBAR_TAB_FIVE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li/a[text()=\"Tab 5 \"]";
+	
+	
+	//aria-controls="tabs-1"
+	 public final static String HOME_PAGE_TABBAR_TAB_ONE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li[contains(@aria-controls, \"tabs-1\")]"; // /a[text()=\"Tab 1 \"]";
+	 public final static String HOME_PAGE_TABBAR_TAB_TWO = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li[contains(@aria-controls, \"tabs-2\")]";
+	 public final static String HOME_PAGE_TABBAR_TAB_THREE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li[contains(@aria-controls, \"tabs-3\")]";
+	 public final static String HOME_PAGE_TABBAR_TAB_FOUR = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li[contains(@aria-controls, \"tabs-4\")]";
+	 public final static String HOME_PAGE_TABBAR_TAB_FIVE = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/ul[@id=\"tab_ul\"]/li[contains(@aria-controls, \"tabs-5\")]";
+	
 	
 	// Home page TabBar tab content 
 	public final String HOME_PAGE_TABBAR_TAB_CONTENT_HEADER = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div/b";

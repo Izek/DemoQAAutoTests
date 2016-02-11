@@ -48,14 +48,27 @@ public class HomePage extends WebPage {
 	// TabBar buttons section
 	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_ONE)
 	WebElement tabButtonOne;
+
 	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_TWO)
-	WebElement tabButtonTwo;
+	private WebElement tabButtonTwo;
 	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_THREE)
-	WebElement tabButtonThree;
+	private WebElement tabButtonThree;
 	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_FOUR)
-	WebElement tabButtonFour;
+	private WebElement tabButtonFour;
 	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_FIVE)
-	WebElement tabButtonFive;
+	private WebElement tabButtonFive;
+
+	// TabBar content headers
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_ONE)
+	private WebElement tabButtonContentHeaderOne;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_TWO)
+	private WebElement tabButtonContentHeaderTwo;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_THREE)
+	private WebElement tabButtonContentHeaderThree;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_FOUR)
+	private WebElement tabButtonContentHeaderFour;
+	@FindBy(xpath = HomePageData.HOME_PAGE_TABBAR_TAB_CONTENT_HEADER_FIVE)
+	private WebElement tabButtonContentHeaderFive;
 
 	public boolean isHomePageOpened() {
 		return isElementAppeared(homeHeader, 5);
@@ -122,35 +135,82 @@ public class HomePage extends WebPage {
 	// Tabs clicking methods
 	public HomePage clickOnTabOne() {
 		focusOnElement(tabButtonOne);
-		tabButtonOne.click(); return this;
+		tabButtonOne.click();
+		return this;
 	}
 
 	public HomePage clickOnTabTwo() {
 		focusOnElement(tabButtonTwo);
-		tabButtonTwo.click();return this;
+		tabButtonTwo.click();
+		return this;
 	}
 
 	public HomePage clickOnTabThree() {
 		focusOnElement(tabButtonThree);
-		tabButtonThree.click();return this;
+		tabButtonThree.click();
+		return this;
 	}
 
 	public HomePage clickOnTabFour() {
 		focusOnElement(tabButtonFour);
-		tabButtonFour.click();return this;
+		tabButtonFour.click();
+		return this;
 	}
 
 	public HomePage clickOnTabFive() {
 		focusOnElement(tabButtonFive);
-		tabButtonFive.click();return this;
+		tabButtonFive.click();
+		return this;
 	}
-	
-	public WebElement getTabOne() { return tabButtonOne; }
-	
-	public boolean isTabActive(WebElement tabElement)
-	{
-		return false;
+
+	// Tabs getters
+	public WebElement getTabButtonOne() {
+		return tabButtonOne;
 	}
-	
+
+	public WebElement getTabButtonTwo() {
+		return tabButtonTwo;
+	}
+
+	public WebElement getTabButtonThree() {
+		return tabButtonThree;
+	}
+
+	public WebElement getTabButtonFour() {
+		return tabButtonFour;
+	}
+
+	public WebElement getTabButtonFive() {
+		return tabButtonFive;
+	}
+
+	// Tab content header's getters
+	public WebElement getTabButtonContentHeaderOne() {
+		return tabButtonContentHeaderOne;
+	}
+
+	public WebElement getTabButtonContentHeaderTwo() {
+		return tabButtonContentHeaderTwo;
+	}
+
+	public WebElement getTabButtonContentHeaderThree() {
+		return tabButtonContentHeaderThree;
+	}
+
+	public WebElement getTabButtonContentHeaderFour() {
+		return tabButtonContentHeaderFour;
+	}
+
+	public WebElement getTabButtonContentHeaderFive() {
+		return tabButtonContentHeaderFive;
+	}
+
+	public boolean isTabActive(WebElement tabElement) {
+		if (tabElement.getAttribute("aria-selected").equals("true")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

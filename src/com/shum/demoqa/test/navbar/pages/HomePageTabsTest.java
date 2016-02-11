@@ -3,6 +3,7 @@ package com.shum.demoqa.test.navbar.pages;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.pages.HomePage;
@@ -42,6 +43,11 @@ public class HomePageTabsTest extends BaseTest {
 		hPage.clickOnTabFour();
 		System.out.println(tHeaderOne.getAttribute("aria-hidden"));
 		
-		hPage.isTabActive(hPage.getTabOne());
+		Assert.assertTrue(hPage.isTabActive(hPage.getTabButtonFour()), "Fail!." + hPage.getTabButtonFour().getText());
+		
+		Assert.assertFalse(hPage.isTabActive(hPage.getTabButtonTwo()), "Fail!." + hPage.getTabButtonTwo().getText());
+		
+		Assert.assertFalse(hPage.isTabActive(hPage.getTabButtonOne()), "Fail!." + hPage.getTabButtonOne().getText());
+		
 	}
 }
