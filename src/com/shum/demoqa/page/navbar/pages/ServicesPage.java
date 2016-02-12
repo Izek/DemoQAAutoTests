@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
+import com.shum.demoqa.page.navbar.data.pages.ServicesPageData;
 
 public class ServicesPage extends WebPage {
 
@@ -17,11 +18,21 @@ public class ServicesPage extends WebPage {
 		}
 	}
 
-	@FindBy(xpath = "/html/body//main/article/header/h1[@class=\"entry-title\"][text()=\"Services\"]")
-	WebElement sericesHeader;
+	@FindBy(xpath = ServicesPageData.SERVICES_PAGE_HEADER_XPATH)
+	private WebElement servicesPageHeader;
+
+	@FindBy(xpath = ServicesPageData.SERVICES_PAGE_TEXT_XPATH)
+	private WebElement servicesPageText;
 
 	private boolean isServicesPageOpened() {
-		return isElementAppeared(sericesHeader, 5);
+		return isElementAppeared(servicesPageHeader, 5);
 	}
 
+	public WebElement getServicesPageHeader() {
+		return servicesPageHeader;
+	}
+
+	public WebElement getServicesPageText() {
+		return servicesPageText;
+	}
 }
