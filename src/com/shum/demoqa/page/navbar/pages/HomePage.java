@@ -205,12 +205,4 @@ public class HomePage extends WebPage {
 		return tabButtonContentHeaderFive;
 	}
 
-	public boolean isTabActive(WebElement tabElement) {
-		if (tabElement.getAttribute("aria-selected").equals("true")) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 }

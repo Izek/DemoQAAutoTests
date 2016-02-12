@@ -1,12 +1,11 @@
 package com.shum.demoqa.test.navbar.pages;
 
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.pages.HomePage;
+import com.shum.demoqa.test.navbar.data.pages.HomePageDataTest;
 import com.shum.demoqa.tests.BaseTest;
 
 public class HomePageTabsTest extends BaseTest {
@@ -36,18 +35,33 @@ public class HomePageTabsTest extends BaseTest {
 
 		waitForTime(500);
 
-		WebElement tHeaderOne = wDriver.findElement(By.xpath(
-				"/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div[@id=\"primary\"]/main[@id=\"main\"]/article/div/div/div[@id=\"tabs222\"]/div[@id=\"tabs-4\"]"));
-		System.out.println(tHeaderOne.getAttribute("aria-hidden"));
+		hPage.clickOnTabOne();
+		Assert.assertEquals(hPage.getTabButtonContentHeaderOne().getText(),
+				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_ONE, "Failed! Content header "
+						+ hPage.getTabButtonContentHeaderOne().getText() + " does not match expected...");
+
+		hPage.clickOnTabTwo();
+		Assert.assertEquals(hPage.getTabButtonContentHeaderTwo().getText(),
+				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_TWO, "Failed! Content header "
+						+ hPage.getTabButtonContentHeaderTwo().getText() + " does not match expected...");
+
+		
+		hPage.clickOnTabThree();
+		Assert.assertEquals(hPage.getTabButtonContentHeaderThree().getText(),
+				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_THREE, "Failed! Content header "
+						+ hPage.getTabButtonContentHeaderThree().getText() + " does not match expected...");
 
 		hPage.clickOnTabFour();
-		System.out.println(tHeaderOne.getAttribute("aria-hidden"));
+		Assert.assertEquals(hPage.getTabButtonContentHeaderFour().getText(),
+				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_FOUR, "Failed! Content header "
+						+ hPage.getTabButtonContentHeaderFour().getText() + " does not match expected...");
+
+		System.out.println(hPage.getTabButtonContentHeaderOne().getText());
 		
-		Assert.assertTrue(hPage.isTabActive(hPage.getTabButtonFour()), "Fail!." + hPage.getTabButtonFour().getText());
-		
-		Assert.assertFalse(hPage.isTabActive(hPage.getTabButtonTwo()), "Fail!." + hPage.getTabButtonTwo().getText());
-		
-		Assert.assertFalse(hPage.isTabActive(hPage.getTabButtonOne()), "Fail!." + hPage.getTabButtonOne().getText());
-		
+		hPage.clickOnTabFive();
+		Assert.assertEquals(hPage.getTabButtonContentHeaderFive().getText(),
+				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_FIVE, "Failed! Content header "
+						+ hPage.getTabButtonContentHeaderFive().getText() + " does not match expected...");
+
 	}
 }
