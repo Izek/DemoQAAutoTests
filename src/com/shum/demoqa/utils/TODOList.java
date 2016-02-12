@@ -18,4 +18,5 @@ public class TODOList {
 	
 	// TODO: Add BreadCrumbs tests to HomePage 
 	
+	//TODO: Verify BreadCrumbs and Title tests for HomePage and AboutUs pages
 }
