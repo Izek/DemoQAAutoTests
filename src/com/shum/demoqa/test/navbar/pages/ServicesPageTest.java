@@ -1,11 +1,12 @@
 package com.shum.demoqa.test.navbar.pages;
 
+
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.shum.demoqa.page.WebPage;
-import com.shum.demoqa.page.navbar.data.pages.ServicesPageData;
+import com.shum.demoqa.page.navbar.pages.ServicesPage;
+import com.shum.demoqa.test.navbar.data.pages.ServicesPageDataTest;
 import com.shum.demoqa.tests.BaseTest;
 
 public class ServicesPageTest extends BaseTest {
@@ -23,19 +24,20 @@ public class ServicesPageTest extends BaseTest {
 	@Test
 	public void getTitleTest() {
 		WebPage wPage = new WebPage(wDriver);
-		wPage.navBar.openServicesPage();
-		
-		System.out.println(wPage.getPageTitle());
-		
-		System.out.println();
-		
-		WebElement el = wDriver.findElement(By.xpath(ServicesPageData.SERVICES_PAGE_TEXT_XPATH));
-		
-		System.out.println(el.getText());
-		
-	
-		
-		
+		ServicesPage sPage = wPage.navBar.openServicesPage();
+
+		Assert.assertEquals(sPage.getPageTitle(), ServicesPageDataTest.SERVICES_PAGE_TITLE,
+				"Fail!. Page title does not match...");
+
+		Assert.assertEquals(sPage.breadCrumbs.getBreadCrumbsTitle(), ServicesPageDataTest.SERVICES_PAGE_BREADCRUMBS,
+				"Fail!. Page breadcrumbs do not match...");
+
+		Assert.assertEquals(sPage.getServicesPageHeader().getText(), ServicesPageDataTest.SERVICES_PAGE_HEADER,
+				"Fail!. Page title does not match...");
+
+		Assert.assertEquals(sPage.getServicesPageText().getText(), ServicesPageDataTest.SERVICES_PAGE_TEXT,
+				"Fail!. Page text does not match...");
+
 	}
 
 }
