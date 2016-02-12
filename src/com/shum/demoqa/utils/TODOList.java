@@ -10,4 +10,11 @@ public class TODOList {
 
 	// TODO: Create method to return page content header.
 	// TODO: Should be implemented in WebPage.class. Should return String value.
+	
+	// TODO: Refactor HomePage.class - all WebElements should be private
+	// TODO: Refactor HomePageData.class - Data cleanup is needed.
+	
+	// TODO: Refactor HomePageTestData.class - Data cleanup is needed.
+	
+	
 }
