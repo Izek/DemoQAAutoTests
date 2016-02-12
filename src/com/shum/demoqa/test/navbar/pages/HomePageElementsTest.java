@@ -21,7 +21,7 @@ public class HomePageElementsTest extends BaseTest {
 	}
 
 	@Test
-	public void contentDescriptionHeadersTest() {
+	public void contentImagesDescriptionHeadersTest() {
 		WebPage wPage = new WebPage(wDriver);
 		wPage.navBar.openHomePage();
 

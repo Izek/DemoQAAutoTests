@@ -45,7 +45,6 @@ public class HomePageTabsTest extends BaseTest {
 				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_TWO, "Failed! Content header "
 						+ hPage.getTabButtonContentHeaderTwo().getText() + " does not match expected...");
 
-		
 		hPage.clickOnTabThree();
 		Assert.assertEquals(hPage.getTabButtonContentHeaderThree().getText(),
 				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_THREE, "Failed! Content header "
@@ -57,7 +56,7 @@ public class HomePageTabsTest extends BaseTest {
 						+ hPage.getTabButtonContentHeaderFour().getText() + " does not match expected...");
 
 		System.out.println(hPage.getTabButtonContentHeaderOne().getText());
-		
+
 		hPage.clickOnTabFive();
 		Assert.assertEquals(hPage.getTabButtonContentHeaderFive().getText(),
 				HomePageDataTest.HOME_PAGE_TABS_CONTENT_TITLE_FIVE, "Failed! Content header "
