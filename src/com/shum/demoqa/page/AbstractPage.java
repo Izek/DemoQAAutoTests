@@ -74,6 +74,8 @@ public class AbstractPage {
 	 */
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
+		
+		waitForTime(250);
 	}
 
 	/**
