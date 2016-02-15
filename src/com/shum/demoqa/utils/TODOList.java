@@ -21,4 +21,8 @@ public class TODOList {
 	// TODO: Verify BreadCrumbs and Title tests for HomePage and AboutUs pages
 	
 	// TODO: Add java doc to TabsPage (NavBar)
+	
+	
+	// TODO: Create Several branches for BlogPage, declaring and testing each one
+	// TODO: BlogPage should be inherited from the AbstractPage. (without SideBar)
 }
