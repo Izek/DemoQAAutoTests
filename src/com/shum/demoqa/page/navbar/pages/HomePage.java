@@ -1,4 +1,4 @@
-package com.shum.demoqa.page.navbar.pageobjects;
+package com.shum.demoqa.page.navbar.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

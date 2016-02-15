@@ -8,6 +8,17 @@ public class TODOList {
 	// TODO: Create documentation for Footer.class
 	// TODO: Create documentation for FooterTest.class
 
-	// TODO: Refactor data interfaces for each page objects.
+	// TODO: Create method to return page content header.
+	// TODO: Should be implemented in WebPage.class. Should return String value.
 
+	// TODO: Refactor HomePage.class - all WebElements should be private
+	// TODO: Refactor HomePageData.class - Data cleanup is needed.
+
+	// TODO: Refactor HomePageTestData.class - Data cleanup is needed.
+
+	// TODO: Add BreadCrumbs tests to HomePage
+
+	// TODO: Verify BreadCrumbs and Title tests for HomePage and AboutUs pages
+	
+	// TODO: Add java doc to TabsPage (NavBar)
 }

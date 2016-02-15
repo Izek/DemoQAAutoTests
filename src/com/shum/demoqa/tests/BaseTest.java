@@ -18,4 +18,17 @@ public class BaseTest {
 	public void tearDown() {
 		wDriver.close();
 	}
+	
+	/**
+	 * Delays execution of test scenario for given time in milliseconds.
+	 * 
+	 * @param milliseconds
+	 */
+	public void waitForTime(int milliseconds) {
+		try {
+			Thread.sleep(milliseconds);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }
