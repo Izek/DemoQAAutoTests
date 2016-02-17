@@ -1,5 +1,6 @@
 package com.shum.demoqa.page.navbar.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,11 @@ public class DraggablePage extends WebPage {
 	@FindBy(xpath = DraggablePageData.DRAGGABLE_PAGE_TAB_DRAGGABLE_SORTABLE_XPATH)
 	private WebElement tabDraggableSortable;
 
+	@FindBy(xpath = DraggablePageData.DRAGGABLE_PAGE_TAB_DEF_FUNC_CONTAINER_XPATH)
+	private WebElement tabDefFuncContainder;
+	@FindBy(xpath = DraggablePageData.DRAGGABLE_PAGE_TAB_DEF_FUNC_DRAGGABLE_XPATH)
+	private WebElement tabDefFuncDraggable;
+
 	private boolean isDraggablePageOpened() {
 		return isElementAppeared(draggableHeader, 5);
 	}
@@ -68,4 +74,20 @@ public class DraggablePage extends WebPage {
 		tabDraggableSortable.click();
 		return this;
 	}
+
+	// Tab: Default Functionality
+	public WebElement getDraggableContainer() {
+		return tabDefFuncContainder;
+	}
+
+	public WebElement getDraggableObject() {
+		return tabDefFuncDraggable;
+	}
+
+	public WebElement setDraggableToPosition(String destination) {
+		WebElement wEl = wDriver
+				.findElement(By.xpath(DraggablePageData.DRAGGABLE_PAGE_TAB_DEF_FUNCTIONALITY_XPATH + destination));
+		return wEl;
+	}
+
 }
