@@ -25,32 +25,51 @@ public class DraggablePageElementsTest extends BaseTest {
 	public void openDraggablePageTest() {
 		WebPage webPage = new WebPage(wDriver);
 		DraggablePage dPage = webPage.navBar.openDraggablePage();
-		
+
 		dPage.clickOnConstraintMovementTab();
 		dPage.clickOnCursorStyleTab();
 		dPage.clickOnDefFuncTab();
 		dPage.clickOnEventsTab();
 		dPage.clickOnDraggableSortableTab();
-		
-		
+
 		dPage.clickOnDefFuncTab();
-		
-		String position = "/html/body//div[@id=\"primary\"]/main/article/div[@class=\"entry-content\"]//div[@id=\"tabs-1\"]/div[@class=\"inside_contain\"]/div[@id=\"draggable\"][@style=\"position: relative; left: 283px; top: 93px;\"]";
-		//WebElement wEl = wDriver.findElement(By.xpath(position));
-		
-		
+
+		// String position =
+		// "/html/body//div[@id=\"primary\"]/main/article/div[@class=\"entry-content\"]//div[@id=\"tabs-1\"]/div[@class=\"inside_contain\"]/div[@id=\"draggable\"][@style=\"position:
+		// relative; left: 283px; top: 93px;\"]";
+		// WebElement wEl = wDriver.findElement(By.xpath(position));
+
 		Actions builder = new Actions(wDriver);
-		
-		//builder.clickAndHold(dPage.getDraggableObject()).moveToElement(wEl).release().build();
-		
-	//	builder.clickAndHold(dPage.getDraggableObject()).moveByOffset(283, 93).release().build();
-		
+
+		// builder.clickAndHold(dPage.getDraggableObject()).moveToElement(wEl).release().build();
+
+		// builder.clickAndHold(dPage.getDraggableObject()).moveByOffset(283,
+		// 93).release().build();
+
 		builder.clickAndHold(dPage.getDraggableObject()).moveByOffset(500, 300).release().build();
-		
+
 		builder.perform();
+
+		waitForTime(1000);
 		
-		waitForTime(10000);
+		wDriver.manage().window().maximize();
+
+		//
+		wDriver.navigate().refresh();
+
+		builder.clickAndHold(dPage.getDraggableObject()).build();
+		builder.dragAndDropBy(dPage.getDraggableObject(), 300, 250).build().perform();
+
+		waitForTime(1900);
+	//	builder.release().perform();;
+		waitForTime(2000);
+
+//		builder.clickAndHold(dPage.getDraggableObject()).perform();
+//		builder.dragAndDropBy(dPage.getDraggableObject(), 500, 450);
+//
+//		waitForTime(1900);
+//		builder.release();
+//		waitForTime(2000);
 	}
 
-	
 }
