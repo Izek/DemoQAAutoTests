@@ -12,5 +12,6 @@ public interface DraggablePageData {
 	public final static String DRAGGABLE_PAGE_TAB_DRAGGABLE_SORTABLE_XPATH = "/html/body/div[@id=\"page\"]/div[@id=\"content\"]/div/main[@id=\"main\"]/article/div/div/div[@id=\"tabs\"]/ul/li/a[@href=\"#tabs-7\"]";
 
 	public final static String DRAGGABLE_PAGE_TAB_DEF_FUNC_CONTAINER_XPATH = "/html/body//div[@id=\"primary\"]/main/article/div[@class=\"entry-content\"]//div[@id=\"tabs-1\"]/div[@class=\"inside_contain\"]";
-	public final static String DRAGGABLE_PAGE_TAB_DEF_FUNC_DRAGGABLE_XPATH = "/html/body//div[@id=\"primary\"]/main/article/div[@class=\"entry-content\"]//div[@id=\"tabs-1\"]/div[@class=\"inside_contain\"]/div[@id=\"draggable\"][@style=\"position: relative;\"]";
+	public final static String DRAGGABLE_PAGE_TAB_DEF_FUNC_DRAGGABLE_XPATH = "/html/body//div[@id=\"primary\"]/main/article/div[@class=\"entry-content\"]//div[@id=\"tabs-1\"]/div[@class=\"inside_contain\"]/div[@id=\"draggable\"]"; // [@style=\"position:
+																																																										// relative;\"]";
 }
