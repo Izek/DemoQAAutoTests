@@ -74,6 +74,8 @@ public class AbstractPage {
 	 */
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
+
+		waitForTime(250);
 	}
 
 	/**
@@ -87,5 +89,38 @@ public class AbstractPage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * Navigates back to previous page.
+	 * <p>
+	 * Move back a single "item" in the browser's history.
+	 * </p>
+	 */
+	public void navigateBack() {
+		wDriver.navigate().back();
+	}
+
+	/**
+	 * Navigates forward to previous page.
+	 * <p>
+	 * Move a single "item" forward in the browser's history. Does nothing if we
+	 * are on the latest page viewed.
+	 * </p>
+	 */
+	public void navigateForward() {
+		wDriver.navigate().forward();
+	}
+
+	/**
+	 * Maximizes web browser's window.
+	 * 
+	 * <p>
+	 * Overrides WebDriver's <code>maximize()</code> method in order to display web-browser in
+	 * ful screen.
+	 * </p>
+	 */
+	public void maximizeWindow() {
+		wDriver.manage().window().maximize();
 	}
 }
