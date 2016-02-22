@@ -74,6 +74,8 @@ public class AbstractPage {
 	 */
 	public void focusOnElement(WebElement webElement) {
 		new Actions(wDriver).moveToElement(webElement).perform();
+
+		waitForTime(250);
 	}
 
 	/**
@@ -108,5 +110,17 @@ public class AbstractPage {
 	 */
 	public void navigateForward() {
 		wDriver.navigate().forward();
+	}
+
+	/**
+	 * Maximizes web browser's window.
+	 * 
+	 * <p>
+	 * Overrides WebDriver's <code>maximize()</code> method in order to display web-browser in
+	 * ful screen.
+	 * </p>
+	 */
+	public void maximizeWindow() {
+		wDriver.manage().window().maximize();
 	}
 }
