@@ -27,6 +27,9 @@ public class BlogPage extends WebPage {
 	WebElement blogHeader;
 
 	private boolean isBlogPageOpened() {
-		return isElementAppeared(blogHeader, 5);
+		if (this.breadCrumbs.getBreadCrumbsTitle().equals("Blog"))
+			return true;
+		else
+			return false;
 	}
 }
