@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.data.pages.BlogPageData;
+import com.shum.demoqa.page.navbar.pages.blog.SamplePostOne;
+import com.shum.demoqa.page.navbar.pages.blog.UncategorizedBlogPage;
 
 public class BlogPage extends WebPage {
 
@@ -77,6 +79,37 @@ public class BlogPage extends WebPage {
 		else
 			return false;
 	}
-	
-	public Object clickOnSamplePostOne() {return new Object();}
+
+	public SamplePostOne clickOnSamplePostOne() {
+		focusOnElement(samplePostOneLink);
+		samplePostOneLink.click();
+		return new SamplePostOne(wDriver);
+	}
+
+	public String getSamplePostOneLinkText() {
+		return samplePostOneLink.getText();
+	}
+
+	public UncategorizedBlogPage clickOnSampleOnePostedLink() {
+		focusOnElement(samplePostOnePostedOnLink);
+		samplePostOnePostedOnLink.click();
+		return new UncategorizedBlogPage(wDriver);
+	}
+
+	public SamplePostOne clickOnSamplePostOneImagePreview() {
+		focusOnElement(samplePostOnePreviewImageLink);
+		samplePostOnePreviewImageLink.click();
+		return new SamplePostOne(wDriver);
+	}
+
+	public String getSamplePostOneDescription() {
+		return samplePostOneDescriptionText.getText();
+	}
+
+	public SamplePostOne clickOnReadMoreButton() {
+		focusOnElement(samplePostOneReadMoreButton);
+		samplePostOneReadMoreButton.click();
+		return new SamplePostOne(wDriver);
+	}
+
 }
