@@ -4,6 +4,8 @@ public interface AdminPageData {
 
 	public final static String ADMIN_PAGE_SAMPLE_POST_HEADER_NAME_XPATH = "/html/body/div/div/section/main/header/h1/span";
 
+	public final static String ADMIN_PAGE_ARTICLE_COUNT_LINK_XPATH = "/html/body//main/div/h4[@class=\"author-meta-title\"]/a";
+
 	// Spample Post One
 
 	public final static String ADMIN_PAGE_SAMPLE_POST_ONE_HEADER_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/header/h2/";
