@@ -2,9 +2,9 @@ package com.shum.demoqa.page.navbar.pages.blog;
 
 import org.openqa.selenium.WebDriver;
 
-public class SamplePostTwo extends BlogBasePage {
+public class SamplePostTwoPage extends BlogBasePage {
 
-	public SamplePostTwo(WebDriver wDriver) {
+	public SamplePostTwoPage(WebDriver wDriver) {
 		super(wDriver);
 		// TODO Auto-generated constructor stub
 	}

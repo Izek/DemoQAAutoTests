@@ -1,14 +1,14 @@
 package com.shum.demoqa.page.navbar.pages.blog.data;
 
-public interface SamplePostTwoData {
+public interface SamplePostOnePageData {
 
-	public final static String SAMPLE_POST_TWO_HEADER_XPATH = "/html/body//main/article[@id=\"post-379\"]/header/h1";
-	public final static String SAMPLE_POST_TWO_POST_DATE_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/header/div/span/a";
-	public final static String SAMPLE_POST_TWO_POST_AUTHOR_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/header/div/span/span/a";
+	public final static String SAMPLE_POST_TWO_HEADER_XPATH = "/html/body//main/article[@id=\"post-377\"]/header/h1";
+	public final static String SAMPLE_POST_TWO_POST_DATE_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/header/div/span/a";
+	public final static String SAMPLE_POST_TWO_POST_AUTHOR_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/header/div/span/span/a";
 
-	public final static String SAMPLE_POST_TWO_TEXT_XPATH = "/html/body//main/article[@id=\"post-379\"]/div/p";
+	public final static String SAMPLE_POST_TWO_TEXT_XPATH = "/html/body//main/article[@id=\"post-377\"]/div/p";
 
-	public final static String SAMPLE_POST_TWO_BOOKMARK_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/footer/a";
+	public final static String SAMPLE_POST_TWO_BOOKMARK_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/footer/a";
 
 	public final static String SAMPLE_POST_TWO_LIKE_BUTTON_XPATH = "/html/body//main/p/button/span";
 	public final static String SAMPLE_POST_TWO_LIKES_COUNT_XPATH = "/html/body//main/p/span";
