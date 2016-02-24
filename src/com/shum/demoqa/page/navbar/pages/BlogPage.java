@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import com.shum.demoqa.exceptions.PageNotFoundException;
 import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.data.pages.BlogPageData;
-import com.shum.demoqa.page.navbar.pages.blog.SamplePostOne;
+import com.shum.demoqa.page.navbar.pages.blog.SamplePostOnePage;
+import com.shum.demoqa.page.navbar.pages.blog.SamplePostTwoPage;
 import com.shum.demoqa.page.navbar.pages.blog.UncategorizedBlogPage;
 
 public class BlogPage extends WebPage {
@@ -80,10 +81,11 @@ public class BlogPage extends WebPage {
 			return false;
 	}
 
-	public SamplePostOne clickOnSamplePostOne() {
+	// SamplePostOne methods
+	public SamplePostOnePage clickOnSamplePostOne() {
 		focusOnElement(samplePostOneLink);
 		samplePostOneLink.click();
-		return new SamplePostOne(wDriver);
+		return new SamplePostOnePage(wDriver);
 	}
 
 	public String getSamplePostOneLinkText() {
@@ -96,20 +98,52 @@ public class BlogPage extends WebPage {
 		return new UncategorizedBlogPage(wDriver);
 	}
 
-	public SamplePostOne clickOnSamplePostOneImagePreview() {
+	public SamplePostOnePage clickOnSamplePostOneImagePreview() {
 		focusOnElement(samplePostOnePreviewImageLink);
 		samplePostOnePreviewImageLink.click();
-		return new SamplePostOne(wDriver);
+		return new SamplePostOnePage(wDriver);
 	}
 
 	public String getSamplePostOneDescription() {
 		return samplePostOneDescriptionText.getText();
 	}
 
-	public SamplePostOne clickOnReadMoreButton() {
+	public SamplePostOnePage clickOnSamplePostOneReadMoreButton() {
 		focusOnElement(samplePostOneReadMoreButton);
 		samplePostOneReadMoreButton.click();
-		return new SamplePostOne(wDriver);
+		return new SamplePostOnePage(wDriver);
 	}
 
+	// SamplePostOne methods
+	public SamplePostTwoPage clickOnSamplePostTwo() {
+		focusOnElement(samplePostTwoLink);
+		samplePostTwoLink.click();
+		return new SamplePostTwoPage(wDriver);
+	}
+
+	public String getSamplePostTwoLinkText() {
+		return samplePostTwoLink.getText();
+	}
+
+	public UncategorizedBlogPage clickOnSampleTwoPostedLink() {
+		focusOnElement(samplePostTwoPostedOnLink);
+		samplePostTwoPostedOnLink.click();
+		return new UncategorizedBlogPage(wDriver);
+	}
+
+	public SamplePostTwoPage clickOnSamplePostTwoImagePreview() {
+		focusOnElement(samplePostTwoPreviewImageLink);
+		samplePostTwoPreviewImageLink.click();
+		return new SamplePostTwoPage(wDriver);
+	}
+
+	public String getSamplePostTwoDescription() {
+		return samplePostTwoDescriptionText.getText();
+	}
+
+	public SamplePostTwoPage clickOnSamplePostTwoReadMoreButton() {
+		focusOnElement(samplePostOneReadMoreButton);
+		samplePostOneReadMoreButton.click();
+		return new SamplePostTwoPage(wDriver);
+	}
 }
