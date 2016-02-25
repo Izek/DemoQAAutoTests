@@ -7,6 +7,7 @@ import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.pages.BlogPage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostOnePage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostTwoPage;
+import com.shum.demoqa.page.navbar.pages.blog.UncategorizedBlogPage;
 import com.shum.demoqa.test.navbar.data.pages.BlogPageDataTest;
 import com.shum.demoqa.tests.BaseTest;
 
@@ -94,5 +95,21 @@ public class BlogPageElementsTest extends BaseTest {
 
 		samplePostTwoPage = blogPage.clickOnSamplePostTwoReadMoreButton();
 		samplePostTwoPage.navigateBack();
+	}
+	
+	@Test
+	public void blogPostedOnLinkTest() {
+		WebPage wPage = new WebPage(wDriver);
+		BlogPage blogPage = wPage.navBar.openBlogPage();
+
+		blogPage.maximizeWindow();
+
+		UncategorizedBlogPage uncategorizedBlogPage;
+		
+		uncategorizedBlogPage = blogPage.clickOnSampleOnePostedLink();
+		uncategorizedBlogPage.navigateBack();
+		
+		uncategorizedBlogPage = blogPage.clickOnSampleTwoPostedLink();
+		uncategorizedBlogPage.navigateBack();
 	}
 }
