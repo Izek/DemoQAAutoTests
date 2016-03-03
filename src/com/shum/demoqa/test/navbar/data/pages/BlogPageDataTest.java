@@ -3,7 +3,7 @@ package com.shum.demoqa.test.navbar.data.pages;
 public interface BlogPageDataTest {
 
 	// "Blog | Demoqa";
-	public final static String BLOG_PAGE_TITLE = "Blog | Demoqa | Just another WordPress site";
+	public final static String BLOG_PAGE_TITLE_TEXT = "Blog | Demoqa | Just another WordPress site";
 
 	public final static String BLOG_PAGE_POST_ONE_HEADER_TEXT = "Sample Post";
 	public final static String BLOG_PAGE_POST_ONE_DESCRIPTION = "It is a long established fact that a reader will be distracted by the readable content"

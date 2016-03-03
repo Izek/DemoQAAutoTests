@@ -10,7 +10,6 @@ import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.data.pages.BlogPageData;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostOnePage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostTwoPage;
-import com.shum.demoqa.page.navbar.pages.blog.UncategorizedBlogPage;
 
 public class BlogPage extends WebPage {
 
@@ -92,10 +91,10 @@ public class BlogPage extends WebPage {
 		return samplePostOneLink.getText();
 	}
 
-	public UncategorizedBlogPage clickOnSampleOnePostedLink() {
+	public SamplePostOnePage clickOnSampleOnePostedLink() {
 		focusOnElement(samplePostOnePostedOnLink);
 		samplePostOnePostedOnLink.click();
-		return new UncategorizedBlogPage(wDriver);
+		return new SamplePostOnePage(wDriver);
 	}
 
 	public SamplePostOnePage clickOnSamplePostOneImagePreview() {
@@ -125,10 +124,10 @@ public class BlogPage extends WebPage {
 		return samplePostTwoLink.getText();
 	}
 
-	public UncategorizedBlogPage clickOnSampleTwoPostedLink() {
+	public SamplePostTwoPage clickOnSampleTwoPostedLink() {
 		focusOnElement(samplePostTwoPostedOnLink);
 		samplePostTwoPostedOnLink.click();
-		return new UncategorizedBlogPage(wDriver);
+		return new SamplePostTwoPage(wDriver);
 	}
 
 	public SamplePostTwoPage clickOnSamplePostTwoImagePreview() {

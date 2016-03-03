@@ -7,7 +7,6 @@ import com.shum.demoqa.page.WebPage;
 import com.shum.demoqa.page.navbar.pages.BlogPage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostOnePage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostTwoPage;
-import com.shum.demoqa.page.navbar.pages.blog.UncategorizedBlogPage;
 import com.shum.demoqa.test.navbar.data.pages.BlogPageDataTest;
 import com.shum.demoqa.tests.BaseTest;
 
@@ -28,6 +27,9 @@ public class BlogPageElementsTest extends BaseTest {
 		WebPage wPage = new WebPage(wDriver);
 		BlogPage blogPage = wPage.navBar.openBlogPage();
 
+		Assert.assertTrue(blogPage.getPageTitle().equals(BlogPageDataTest.BLOG_PAGE_TITLE_TEXT),
+				"Fail!. Name of 'Sample Post One' post does not match!.");
+		
 		System.out.println(blogPage.getPageTitle());
 	}
 
@@ -104,12 +106,16 @@ public class BlogPageElementsTest extends BaseTest {
 
 		blogPage.maximizeWindow();
 
-		UncategorizedBlogPage uncategorizedBlogPage;
+		//UncategorizedBlogPage uncategorizedBlogPage;
 		
-		uncategorizedBlogPage = blogPage.clickOnSampleOnePostedLink();
-		uncategorizedBlogPage.navigateBack();
+		SamplePostOnePage samplePostOnePage;
 		
-		uncategorizedBlogPage = blogPage.clickOnSampleTwoPostedLink();
-		uncategorizedBlogPage.navigateBack();
+		samplePostOnePage = blogPage.clickOnSampleOnePostedLink();
+		samplePostOnePage.navigateBack();
+		
+		
+		SamplePostTwoPage samplePostTwoPage;
+		samplePostTwoPage = blogPage.clickOnSampleTwoPostedLink();
+		samplePostTwoPage.navigateBack();
 	}
 }
