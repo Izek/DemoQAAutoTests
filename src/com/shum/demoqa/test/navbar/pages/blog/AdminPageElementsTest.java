@@ -6,7 +6,6 @@ import org.testng.Assert;
 import com.shum.demoqa.page.navbar.pages.blog.AdminPage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostOnePage;
 import com.shum.demoqa.page.navbar.pages.blog.SamplePostTwoPage;
-import com.shum.demoqa.page.navbar.pages.blog.UncategorizedBlogPage;
 import com.shum.demoqa.test.navbar.data.pages.blog.AdminPageDataTest;
 import com.shum.demoqa.tests.BaseTest;
 
@@ -108,13 +107,13 @@ public class AdminPageElementsTest extends BaseTest {
 		// WebPage wPage = new WebPage(wDriver);
 		AdminPage adminPage = new AdminPage(wDriver);
 		adminPage.maximizeWindow();
+		
+		SamplePostOnePage samplePostOnePage;
+		samplePostOnePage = adminPage.clickOnSampleOnePostedLink();
+		samplePostOnePage.navigateBack();
 
-		UncategorizedBlogPage uncategorizedBlogPage;
-
-		uncategorizedBlogPage = adminPage.clickOnSampleOnePostedLink();
-		uncategorizedBlogPage.navigateBack();
-
-		uncategorizedBlogPage = adminPage.clickOnSampleTwoPostedLink();
-		uncategorizedBlogPage.navigateBack();
+		SamplePostTwoPage samplePostTwoPage;
+		samplePostTwoPage = adminPage.clickOnSampleTwoPostedLink();
+		samplePostTwoPage.navigateBack();
 	}
 }

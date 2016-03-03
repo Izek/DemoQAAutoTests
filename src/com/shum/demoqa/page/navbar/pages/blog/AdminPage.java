@@ -91,10 +91,10 @@ public class AdminPage extends WebPage {
 		return samplePostOneLink.getText();
 	}
 
-	public UncategorizedBlogPage clickOnSampleOnePostedLink() {
+	public SamplePostOnePage clickOnSampleOnePostedLink() {
 		focusOnElement(samplePostOnePostedOnLink);
 		samplePostOnePostedOnLink.click();
-		return new UncategorizedBlogPage(wDriver);
+		return new SamplePostOnePage(wDriver);
 	}
 
 	public SamplePostOnePage clickOnSamplePostOneImagePreview() {
@@ -124,10 +124,10 @@ public class AdminPage extends WebPage {
 		return samplePostTwoLink.getText();
 	}
 
-	public UncategorizedBlogPage clickOnSampleTwoPostedLink() {
+	public SamplePostTwoPage clickOnSampleTwoPostedLink() {
 		focusOnElement(samplePostTwoPostedOnLink);
 		samplePostTwoPostedOnLink.click();
-		return new UncategorizedBlogPage(wDriver);
+		return new SamplePostTwoPage(wDriver);
 	}
 
 	public SamplePostTwoPage clickOnSamplePostTwoImagePreview() {
