@@ -107,10 +107,13 @@ public class AdminPageElementsTest extends BaseTest {
 		// WebPage wPage = new WebPage(wDriver);
 		AdminPage adminPage = new AdminPage(wDriver);
 		adminPage.maximizeWindow();
-		
+
 		SamplePostOnePage samplePostOnePage;
 		samplePostOnePage = adminPage.clickOnSampleOnePostedLink();
 		samplePostOnePage.navigateBack();
+
+		// TODO: Implement AbstractPage.refreshWindow() method
+		wDriver.navigate().refresh();
 
 		SamplePostTwoPage samplePostTwoPage;
 		samplePostTwoPage = adminPage.clickOnSampleTwoPostedLink();

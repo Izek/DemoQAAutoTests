@@ -7,7 +7,6 @@ public interface AdminPageData {
 	public final static String ADMIN_PAGE_ARTICLE_COUNT_LINK_XPATH = "/html/body//main/div/h4[@class=\"author-meta-title\"]/a";
 
 	// Spample Post One
-
 	public final static String ADMIN_PAGE_SAMPLE_POST_ONE_HEADER_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/header/h2/a";
 	public final static String ADMIN_PAGE_SAMPLE_POST_ONE_POSTED_ON_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/header/div/span/a";
 
@@ -15,10 +14,9 @@ public interface AdminPageData {
 
 	public final static String ADMIN_PAGE_SAMPLE_POST_ONE_DESCR_XPATH = "/html/body//main/article[@id=\"post-379\"]/div/p";
 
-	public final static String ADMIN_PAGE_SAMPLE_POST_ONE_READ_MORE_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/footer/p/a[contains(text(), \"Read more\")]";
+	public final static String ADMIN_PAGE_SAMPLE_POST_ONE_READ_MORE_LINK_XPATH = "/html/body//main/article[@id=\"post-377\"]/footer/p/a[@class=\"btn btn-primary\"][contains(text(), \"Read more\")]";
 
 	// Spample Post Two
-
 	public final static String ADMIN_PAGE_SAMPLE_POST_TWO_HEADER_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/header/h2/a";
 	public final static String ADMIN_PAGE_SAMPLE_POST_TWO_POSTED_ON_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/header/div/span/a";
 
@@ -26,6 +24,5 @@ public interface AdminPageData {
 
 	public final static String ADMIN_PAGE_SAMPLE_POST_TWO_DESCR_XPATH = "/html/body//main/article[@id=\"post-379\"]/div/p";
 
-	public final static String ADMIN_PAGE_SAMPLE_POST_TWO_READ_MORE_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/footer/p/a[contains(text(), \"Read more\")]";
-
+	public final static String ADMIN_PAGE_SAMPLE_POST_TWO_READ_MORE_LINK_XPATH = "/html/body//main/article[@id=\"post-379\"]/footer/p/a[@class=\"btn btn-primary\"][contains(text(), \"Read more\")]";
 }
