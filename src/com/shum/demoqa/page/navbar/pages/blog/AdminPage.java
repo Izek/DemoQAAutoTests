@@ -76,6 +76,10 @@ public class AdminPage extends WebPage {
 	@CacheLookup
 	WebElement samplePostTwoReadMoreButton;
 
+	public String getAdminPageHeader() {
+		return adminPageHeader.getText();
+	}
+
 	// SamplePostOne methods
 	public SamplePostOnePage clickOnSamplePostOne() {
 		focusOnElement(samplePostOneLink);
