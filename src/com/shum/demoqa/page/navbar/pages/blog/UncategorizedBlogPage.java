@@ -23,6 +23,21 @@ public class UncategorizedBlogPage extends BlogBasePage {
 	@FindBy(xpath = UncategorizedBlogPageData.UNCATEGORIZED_BLOG_PAGE_HEADER_XPATH)
 	@CacheLookup
 	WebElement uncategorizedPageHeader;
+	
+	@FindBy(xpath = UncategorizedBlogPageData.UNCATEGORIZED_BLOG_PAGE_HEADER_XPATH)
+	@CacheLookup
+	WebElement uncategorizedPageLogo;
+		
+	@FindBy(xpath = UncategorizedBlogPageData.UNCATEGORIZED_BLOG_PAGE_HEADER_XPATH)
+	@CacheLookup
+	WebElement uncategorizedSearchInput;
+	
+	@FindBy(xpath = UncategorizedBlogPageData.UNCATEGORIZED_BLOG_PAGE_HEADER_XPATH)
+	@CacheLookup
+	WebElement uncategorizedSearchButton;
+	
+	
+	
 
 	private boolean isUncategorizedBlogPageOpened() {
 		return isElementAppeared(uncategorizedPageHeader, 5);
