@@ -28,14 +28,14 @@ public class ContactPage extends WebPage {
 	WebElement contactYourNameInput;
 	@FindBy(xpath = ContactPageData.CONTACT_PAGE_NAME_VALIDATION_ERROR_ALERT_XPATH)
 	@CacheLookup
-	WebElement contactYourNameErrorMessage;
+	WebElement contactYourNameValidationErrorAlert;
 
 	@FindBy(xpath = ContactPageData.CONTACT_PAGE_EMAIL_INPUT_XPATH)
 	@CacheLookup
-	WebElement contactYourEmailLabel;
+	WebElement contactYourEmailInput;
 	@FindBy(xpath = ContactPageData.CONTACT_PAGE_EMAIL_VALIDATION_ERROR_ALERT_XPATH)
 	@CacheLookup
-	WebElement contactYourEmailErrorMessage;
+	WebElement contactYourEmailValidationErrorAlert;
 
 	@FindBy(xpath = ContactPageData.CONTACT_PAGE_SUBJECT_INPUT_XPATH)
 	@CacheLookup
@@ -56,4 +56,43 @@ public class ContactPage extends WebPage {
 	private boolean isContactPageOpened() {
 		return isElementAppeared(contactHeader, 5);
 	}
+
+	public WebElement getContactPageHeader() {
+		return contactHeader;
+	}
+
+	public WebElement getContactPageNameInput() {
+		return contactYourNameInput;
+	}
+
+	public WebElement getContactPageNameValidationErrorAlert() {
+		return contactYourNameValidationErrorAlert;
+	}
+
+	public WebElement getContactPageEmailInput() {
+		return contactYourEmailInput;
+	}
+
+	public WebElement getContactPageEmailValidationErrorAlert() {
+		return contactYourEmailValidationErrorAlert;
+	}
+
+	public WebElement getContactPageSubjectInput() {
+		return contactSubjectInput;
+	}
+
+	public WebElement getContactPageMessageTextArea() {
+		return contactMessageTextArea;
+	}
+
+	public WebElement getContactPageSendButton() {
+		return contactSendButton;
+	}
+
+	public WebElement getContactPageSendingValidationErrorAlert() {
+		return contactSendingValidationAlertError;
+	}
+	
+	public ContactPage clickOnElement(WebElement webElement){ focusOnElement(webElement); webElement.click(); return this;}
+
 }
