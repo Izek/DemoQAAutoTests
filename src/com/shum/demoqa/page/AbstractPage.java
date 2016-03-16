@@ -123,4 +123,17 @@ public class AbstractPage {
 	public void maximizeWindow() {
 		wDriver.manage().window().maximize();
 	}
+
+	
+	
+	//TODO: Add java-doc for methods
+	public void clickOn(WebElement webElement) {
+		focusOnElement(webElement);
+		webElement.click();
+	}
+
+	public void enterText(WebElement inputWebElement, String keysToSend) {
+		clickOn(inputWebElement);
+		inputWebElement.sendKeys(keysToSend);
+	}
 }
