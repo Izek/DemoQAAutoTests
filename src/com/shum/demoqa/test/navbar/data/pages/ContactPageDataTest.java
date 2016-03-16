@@ -24,7 +24,10 @@ public interface ContactPageDataTest {
 	public final static String CONTACT_PAGE_TEST_TWO_NAME = "";
 	public final static String CONTACT_PAGE_TEST_TWO_EMAIL = "";
 	public final static String CONTACT_PAGE_TEST_TWO_SUBJECT = "";
-	public final static String CONTACT_PAGE_TEST_TWO_MESSAGE = "";
+	public final static String CONTACT_PAGE_TEST_TWO_MESSAGE = "Существует такая байка – в одной деревне завёлся вор, "
+			+ "и его никак не могли поймать. Тогда жители деревни решили обратиться за помощью к деду, который славился своей мудростью. "
+			+ "Дед попросил всех в назначенный день и час собраться на пригорке. Выстроив односельчан в ряд, дед растянул перед ними "
+			+ "верёвку и сказал, что как только он даст команду, все должны её одновременно поднять.";
 
 	public final static String CONTACT_PAGE_TEST_THREE_NAME = "";
 	public final static String CONTACT_PAGE_TEST_THREE_EMAIL = "";

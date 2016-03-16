@@ -12,6 +12,7 @@ public class ContactPageElementTest extends BaseTest {
 	@Override
 	public void setUp() {
 		super.setUp();
+		
 	}
 
 	@Override
@@ -44,15 +45,22 @@ public class ContactPageElementTest extends BaseTest {
 		
 		
 		ContactPage contactPage = webPage.navBar.navigateToContactPage();
+		contactPage.maximizeWindow();
 		
-		contactPage.clickOnElement(contactPage.getContactPageNameInput());
-		
-		waitForTime(3000);
+		contactPage.clickOn(contactPage.getContactPageNameInput());
 		
 		
-		contactPage.clickOnElement(contactPage.getContactPageSendButton());
 		
 		waitForTime(3000);
+		
+		contactPage.enterText(contactPage.getContactPageEmailInput(), "test");
+		
+		waitForTime(3000);
+		contactPage.enterText(contactPage.getContactPageMessageTextArea(), ContactPageDataTest.CONTACT_PAGE_TEST_TWO_MESSAGE);
+		waitForTime(3000);
+		contactPage.clickOn(contactPage.getContactPageSendButton());
+		
+		waitForTime(3000);waitForTime(3000);
 	}
 
 }
