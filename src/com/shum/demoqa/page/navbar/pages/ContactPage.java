@@ -92,7 +92,5 @@ public class ContactPage extends WebPage {
 	public WebElement getContactPageSendingValidationErrorAlert() {
 		return contactSendingValidationAlertError;
 	}
-	
-	public ContactPage clickOnElement(WebElement webElement){ focusOnElement(webElement); webElement.click(); return this;}
 
 }
