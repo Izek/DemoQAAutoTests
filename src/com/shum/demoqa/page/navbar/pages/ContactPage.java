@@ -92,5 +92,12 @@ public class ContactPage extends WebPage {
 	public WebElement getContactPageSendingValidationErrorAlert() {
 		return contactSendingValidationAlertError;
 	}
+	
+	public ContactPage enterName(String name) { this.enterText(contactYourNameInput, name); return this;}
+	public ContactPage enterEmail(String email) { this.enterText(contactYourEmailInput, email); return this;}
+	public ContactPage enterSubject(String subject) {this.enterText(contactSubjectInput, subject); return this;}
+	public ContactPage enterMessage(String message) {this.enterText(contactMessageTextArea, message); return this;}
+	
+	public ContactPage clickOnSendButton() { this.clickOn(contactSendButton); return this;}
 
 }
