@@ -1,6 +1,8 @@
 package com.shum.demoqa.utils;
 
 public class TODOList {
+	
+	// TODO: Update Maven decencies 
 
 	// TODO: Implement waitFor(int milliseconds) method in AbstractPage.class,
 	// which should wait given time in milliseconds.
