@@ -78,6 +78,8 @@ public class ContactPageElementTest extends BaseTest {
 		waitForTime(3000);
 		
 		contactPage.clickOnSendButton();
+		
+		waitForTime(3000);	waitForTime(3000);
 
 	}
 }
